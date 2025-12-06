@@ -97,26 +97,73 @@ Output: Golden palette, bold typography, competitive framing"
 ### Phase 2: Design Mastery
 **Invoke**: @design-master
 
-**Questions**:
-- Which design principles apply?
-- Which masters would guide this?
+**Questions to Ask**:
+- Which design principles apply to this archetypal combination?
+- Which legendary masters (Bass, Vignelli, Rams, Scher, Müller-Brockmann) would guide this?
+- Which design movements (Bauhaus, Swiss, Art Deco, Memphis, Minimalism) resonate?
 - What makes this timeless, not trendy?
+- How do we balance archetypal energy with design excellence?
+
+**Design Master's Toolkit**:
+
+1. **Visual Hierarchy**
+   - Scale: Golden ratio (1:1.618) or major thirds (1.25, 1.5, 2, 3)
+   - Contrast: Light/dark, thick/thin, curved/angular
+   - Position: F-pattern (reading) or Z-pattern (scanning)
+   - Density: Strategic whitespace for emphasis
+   - Color: Hue/saturation/brightness to guide eye
+
+2. **Typography**
+   - Pairing: Serif + sans, geometric + humanist
+   - Hierarchy: Display → Title → Body → Caption
+   - Rhythm: 4px/8px baseline grid
+   - Legibility: 45-75 characters per line, adequate leading
+   - Expression: Font as voice
+
+3. **Color Theory**
+   - 60-30-10 Rule: Dominant/secondary/accent proportions
+   - Psychological impact: Blue=trust, red=urgency, etc.
+   - Accessibility: WCAG contrast ratios
+   - Harmony: Complementary, analogous, triadic schemes
+
+4. **Composition**
+   - Rule of thirds: Natural balance points
+   - Golden ratio: 1:1.618 proportions
+   - Grid systems: Swiss 12-column precision
+   - Negative space: What you omit is crucial
+   - Visual weight: Balance through size/color/complexity
+
+5. **Gestalt Principles**
+   - Proximity: Nearness creates relationships
+   - Similarity: Alike elements group
+   - Continuity: Eye follows paths
+   - Closure: Mind completes shapes
+   - Figure/Ground: Subject vs background separation
 
 **Output**:
-- Grid system (Swiss-style or golden ratio)
-- Typography scale (Vignelli's restraint)
-- Spacing system (8px baseline)
-- Compositional balance
+- Specific master references with quotes
+- Design movement influences
+- Grid system specification (12-column Swiss / golden ratio)
+- Typography scale with mathematical rationale
+- Color theory application (60-30-10 breakdown)
+- Gestalt principles applied
+- Compositional analysis
+- Spacing system (baseline grid)
 
-**Example**:
+**Example Invocation**:
 ```
-@design-master refine Hero+Sun pricing layout
+You: "@design-master analyze Hero+Sun pricing - apply timeless principles"
 
-Response:
-"Apply Saul Bass simplicity - reduce to essentials
-Use Vignelli grid - strict 12-column for hierarchy
-Dieter Rams principle: less but better - remove ornament
-Result: Bold but minimal, powerful but clean"
+@design-master responds with complete breakdown including:
+- Masters applied (Bass simplicity, Vignelli grid, Rams restraint)
+- Design movements (Swiss International Style precision)
+- Typography scale (Golden ratio: 72px → 30px → 20px → 16px)
+- Color theory (60-30-10 breakdown with psychological impact)
+- Gestalt principles in action
+- Grid system specification
+- Compositional analysis
+
+You extract Tailwind classes and apply them systematically
 ```
 
 ---

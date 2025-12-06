@@ -57,12 +57,16 @@ Output: Design philosophy, color tokens, behavioral characteristics
 
 ### Phase 2: Design Mastery (Beauty)
 ```
-1. Apply timeless design principles
-2. Reference design masters for inspiration
-3. Establish typography, spacing, composition
-4. Ensure visual hierarchy & balance
+1. Consult @design-master agent for timeless principles
+2. Apply specific masters' wisdom (Bass, Vignelli, Rams, Scher, Müller-Brockmann)
+3. Reference relevant design movements (Bauhaus, Swiss Style, Art Deco, Memphis, Minimalism)
+4. Establish typography hierarchy using golden ratio/major thirds
+5. Create grid system (Swiss-style 12-column or golden ratio)
+6. Apply color theory (60-30-10 rule, psychological impact, accessibility)
+7. Ensure visual hierarchy through scale, contrast, position, density
+8. Apply Gestalt principles (proximity, similarity, continuity, closure, figure/ground)
 
-Output: Refined visual design, grid system, typography scale
+Output: Refined visual design with explicit master references, grid system, typography scale, compositional rationale
 ```
 
 ### Phase 3: Technical Excellence (Code)
@@ -145,18 +149,101 @@ Example:
 
 ## 🎨 Design Mastery
 
-### Applied Principles
-- [Principle 1]: [How it's implemented]
-- [Principle 2]: [Master reference]
+### Design Masters Applied
 
-### Typography Scale
-[Hierarchical type system]
+#### [Master Name] - [Principle]
+**Wisdom**: [Quote from master]
+**Application**: [How principle is implemented in this component]
+**Tailwind**: [Specific classes/tokens used]
 
-### Spacing System
-[Grid & spacing tokens]
+Example:
+- **Saul Bass - Simplicity**: "Design is thinking made visual"
+  - Reduced tier cards to essential elements only
+  - Bold shapes through border-left-4 accents
+  - `border-l-4 border-yellow-400`
 
-### Composition
-[Layout rationale]
+- **Vignelli - Grid System**: "Constraints liberate creativity"
+  - Strict 3-column grid for pricing tiers
+  - 8px baseline grid for vertical rhythm
+  - `grid grid-cols-3 gap-8`
+
+- **Dieter Rams - Less But Better**: "Good design is as little design as possible"
+  - Removed unnecessary ornament
+  - Every gradient serves function (emphasis, not decoration)
+  - Generous whitespace: `p-8 space-y-6`
+
+### Design Movements Referenced
+
+**[Movement Name]** ([Era]):
+- **Core Principle**: [What it stood for]
+- **Visual Markers**: [Recognizable characteristics]
+- **Applied Here**: [How it influenced this design]
+
+Example:
+- **Swiss International Style** (1950s-1960s)
+  - Clarity through grid and restraint
+  - Asymmetric layouts, mathematical precision
+  - Center tier elevated (podium effect) while maintaining grid integrity
+
+### Typography Hierarchy
+
+**Scale Rationale**: [Golden ratio / Major thirds / Modular scale]
+
+```
+Display:  text-6xl font-black (72px) - Hero headers
+Title:    text-3xl font-bold (30px) - Tier names  [2.4:1 ratio]
+Heading:  text-xl font-medium (20px) - Descriptions [1.5:1 ratio]
+Body:     text-base (16px) - Feature lists [1.25:1 ratio]
+Caption:  text-sm (14px) - Fine print [1.14:1 ratio]
+```
+
+**Font Pairing**: [Rationale for font choices]
+- Display: Bold sans-serif for commanding presence
+- Body: Regular sans for readability
+- Contrast without conflict
+
+### Color Theory Application
+
+**60-30-10 Rule**:
+- 60%: [Dominant color] - Large surfaces, backgrounds
+- 30%: [Secondary color] - Cards, containers
+- 10%: [Accent color] - CTAs, highlights
+
+**Psychological Impact**:
+- [Color 1]: [What it evokes] - [Where used]
+- [Color 2]: [What it evokes] - [Where used]
+
+**Accessibility**: All contrasts meet WCAG AA (4.5:1 text, 3:1 UI)
+
+### Grid System
+
+**Type**: [Swiss-style 12-column / Golden ratio / Custom]
+**Gutters**: [Size and rationale]
+**Breakpoints**: Mobile-first, tablet, desktop
+**Baseline Grid**: 8px for vertical rhythm
+
+### Visual Hierarchy Techniques
+
+1. **Scale**: [How size creates importance]
+2. **Contrast**: [How differences draw attention]
+3. **Position**: [F-pattern / Z-pattern application]
+4. **Density**: [How whitespace emphasizes]
+5. **Color**: [How hue guides the eye]
+
+### Gestalt Principles Applied
+
+- **Proximity**: [How grouping creates relationships]
+- **Similarity**: [How consistent styling groups elements]
+- **Continuity**: [How eye flows through design]
+- **Closure**: [How mind completes shapes]
+- **Figure/Ground**: [How subject separates from background]
+
+### Composition Analysis
+
+**Rule of Thirds**: [How key elements align]
+**Golden Ratio**: [Where 1:1.618 proportions appear]
+**Negative Space**: [How emptiness creates emphasis]
+**Visual Weight**: [How balance is achieved]
 
 ---
 
