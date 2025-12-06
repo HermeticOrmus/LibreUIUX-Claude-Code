@@ -2025,6 +2025,51 @@
         "./skills/debugging-strategies",
         "./skills/monorepo-management"
       ]
+    },
+    {
+      "name": "design-mastery",
+      "source": "./plugins/design-mastery",
+      "description": "Comprehensive design knowledge from timeless principles to legendary masters. Features brand identity commands, design auditing, and deep expertise in visual hierarchy, typography, color theory, Gestalt psychology, and historical design movements. Draws from Saul Bass, Massimo Vignelli, Dieter Rams, Paula Scher, and other design legends.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Hermetic Ormus",
+        "url": "https://github.com/HermeticOrmus"
+      },
+      "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "license": "MIT",
+      "keywords": [
+        "design",
+        "ui-ux",
+        "brand-identity",
+        "design-systems",
+        "typography",
+        "color-theory",
+        "visual-design",
+        "design-principles",
+        "saul-bass",
+        "dieter-rams",
+        "bauhaus",
+        "swiss-design"
+      ],
+      "category": "design",
+      "strict": false,
+      "commands": [
+        "./commands/brand-identity.md",
+        "./commands/design-audit.md",
+        "./commands/style-guide.md"
+      ],
+      "agents": [
+        "./agents/design-master.md",
+        "./agents/brand-architect.md",
+        "./agents/visual-historian.md"
+      ],
+      "skills": [
+        "./skills/design-principles",
+        "./skills/design-masters",
+        "./skills/design-movements",
+        "./skills/brand-systems"
+      ]
     }
   ]
 }

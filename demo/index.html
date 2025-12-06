@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibreUIUX Demo - Vague vs Precise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-white mb-4">LibreUIUX Demo</h1>
+            <p class="text-xl text-white/90">Vague vs Precise: The Power of Design Vocabulary</p>
+        </div>
+
+        <!-- Comparison Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+
+            <!-- VAGUE EXAMPLE -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div class="mb-6">
+                    <span class="inline-block px-4 py-2 bg-red-500/20 text-red-100 rounded-full text-sm font-semibold mb-4">
+                        ❌ VAGUE REQUEST (Fails)
+                    </span>
+                    <div class="bg-gray-900/50 rounded-lg p-4 mb-6">
+                        <code class="text-sm text-gray-300">
+                            "Create a modern, sleek button that looks<br>
+                            professional and nice. Make it visually<br>
+                            appealing with good spacing and colors."
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Vague Result (Bootstrap-era) -->
+                <div class="bg-white/5 rounded-xl p-6 backdrop-blur">
+                    <h3 class="text-white font-semibold mb-4">Result: Bootstrap-Era Design</h3>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
+                        Get Started
+                    </button>
+                    <div class="mt-4 text-sm text-white/70">
+                        <p>❌ Random blue (#3B82F6)</p>
+                        <p>❌ Basic padding (8px 16px)</p>
+                        <p>❌ Small border-radius (4px)</p>
+                        <p>❌ No shadow depth</p>
+                        <p>❌ Simple hover (darker)</p>
+                        <p class="mt-2 text-red-300">Success Rate: ~20%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRECISE EXAMPLE -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div class="mb-6">
+                    <span class="inline-block px-4 py-2 bg-green-500/20 text-green-100 rounded-full text-sm font-semibold mb-4">
+                        ✅ PRECISE REQUEST (Succeeds)
+                    </span>
+                    <div class="bg-gray-900/50 rounded-lg p-4 mb-6 max-h-64 overflow-y-auto">
+                        <code class="text-xs text-gray-300 whitespace-pre-wrap">
+bg-blue-600 (#2563EB)
+hover:bg-blue-700 (#1D4ED8)
+active:bg-blue-800 scale-98
+text-white font-semibold
+px-6 py-3 (24px/12px)
+rounded-lg (8px)
+shadow-md hover:shadow-lg
+transition-all duration-200
+focus:ring-4 focus:ring-blue-100
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Precise Result (Modern) -->
+                <div class="bg-white/5 rounded-xl p-6 backdrop-blur">
+                    <h3 class="text-white font-semibold mb-4">Result: Modern 2025 Design</h3>
+                    <button class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 active:scale-98 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 ease-out focus:ring-4 focus:ring-blue-100 focus:outline-none">
+                        Get Started
+                    </button>
+                    <div class="mt-4 text-sm text-white/70">
+                        <p>✅ Exact color (blue-600)</p>
+                        <p>✅ Precise padding (24px/12px)</p>
+                        <p>✅ Modern radius (8px)</p>
+                        <p>✅ Shadow depth + hover lift</p>
+                        <p>✅ Smooth transitions (200ms)</p>
+                        <p class="mt-2 text-green-300">Success Rate: ~90%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Insight -->
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center mb-8">
+            <h2 class="text-3xl font-bold text-white mb-4">The Core Insight</h2>
+            <p class="text-xl text-white/90 mb-6 max-w-3xl mx-auto">
+                "When you speak design system language instead of vague aesthetics,
+                you're giving <strong>coordinates</strong> instead of <strong>directions</strong>."
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-red-500/20 rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-2">Vague = Guessing</h3>
+                    <p class="text-white/80">"Modern," "nice," "professional"</p>
+                    <p class="text-red-300 mt-2">No shared meaning</p>
+                </div>
+                <div class="bg-green-500/20 rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-2">Precise = Specifications</h3>
+                    <p class="text-white/80">"bg-blue-600," "px-6," "rounded-lg"</p>
+                    <p class="text-green-300 mt-2">Claude knows exactly</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Examples -->
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <h2 class="text-2xl font-bold text-white mb-6">More Component Examples</h2>
+
+            <div class="space-y-6">
+                <!-- Card Example -->
+                <div>
+                    <h3 class="text-white font-semibold mb-3">Modern Card (Precise)</h3>
+                    <div class="max-w-sm bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-1">
+                        <div class="aspect-video bg-gradient-to-br from-blue-500 to-purple-600"></div>
+                        <div class="p-6 flex flex-col gap-4">
+                            <h4 class="text-xl font-semibold text-gray-900">Product Title</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                This card uses precise specifications: rounded-xl, shadow-lg hover:shadow-2xl,
+                                transition-all duration-300, hover:-translate-y-1
+                            </p>
+                            <div class="text-2xl font-bold text-blue-600">$99.00</div>
+                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Example -->
+                <div>
+                    <h3 class="text-white font-semibold mb-3">Modern Input Field (Precise)</h3>
+                    <div class="max-w-md">
+                        <label class="block text-sm font-semibold text-white mb-2">Email Address</label>
+                        <input
+                            type="email"
+                            placeholder="you@example.com"
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-base text-gray-900 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 focus:outline-none transition-all duration-200 placeholder:text-gray-400"
+                        >
+                        <p class="text-xs text-white/70 mt-2">
+                            Specs: px-4 py-3, border-2, rounded-lg, focus:border-blue-500, focus:ring-4 focus:ring-blue-100
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Badge Examples -->
+                <div>
+                    <h3 class="text-white font-semibold mb-3">Semantic Badges (Precise)</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+                            Primary
+                        </span>
+                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+                            Success
+                        </span>
+                        <span class="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-semibold">
+                            Error
+                        </span>
+                        <span class="px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold">
+                            Warning
+                        </span>
+                        <span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold">
+                            Neutral
+                        </span>
+                    </div>
+                    <p class="text-xs text-white/70 mt-2">
+                        Using semantic color scale: blue-100/700, green-100/700, red-100/700, amber-100/700
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Vocabulary Reference -->
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mt-8">
+            <h2 class="text-2xl font-bold text-white mb-6">Design Vocabulary Quick Reference</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Spacing -->
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h3 class="text-white font-semibold mb-3">Spacing Scale</h3>
+                    <div class="space-y-2 text-sm text-white/80 font-mono">
+                        <div>p-1 → 4px</div>
+                        <div>p-2 → 8px</div>
+                        <div>p-4 → 16px</div>
+                        <div>p-6 → 24px (card padding)</div>
+                        <div>p-8 → 32px (section spacing)</div>
+                        <div>p-12 → 48px (large sections)</div>
+                    </div>
+                </div>
+
+                <!-- Shadows -->
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h3 class="text-white font-semibold mb-3">Shadow Scale</h3>
+                    <div class="space-y-2 text-sm text-white/80 font-mono">
+                        <div>shadow-sm → subtle</div>
+                        <div>shadow-md → default cards</div>
+                        <div>shadow-lg → elevated</div>
+                        <div>shadow-xl → modals</div>
+                        <div>shadow-2xl → dramatic</div>
+                    </div>
+                </div>
+
+                <!-- Colors -->
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h3 class="text-white font-semibold mb-3">Color Scale</h3>
+                    <div class="space-y-2 text-sm text-white/80 font-mono">
+                        <div>blue-50 → lightest</div>
+                        <div>blue-400 → light accent</div>
+                        <div>blue-600 → primary brand</div>
+                        <div>blue-700 → hover state</div>
+                        <div>blue-900 → darkest</div>
+                    </div>
+                </div>
+
+                <!-- Border Radius -->
+                <div class="bg-white/5 rounded-lg p-4">
+                    <h3 class="text-white font-semibold mb-3">Border Radius</h3>
+                    <div class="space-y-2 text-sm text-white/80 font-mono">
+                        <div>rounded → 4px (minimal)</div>
+                        <div>rounded-lg → 8px (buttons)</div>
+                        <div>rounded-xl → 12px (cards)</div>
+                        <div>rounded-2xl → 16px (modals)</div>
+                        <div>rounded-full → circular</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-12">
+            <p class="text-white/80 mb-4">
+                <strong class="text-white">Repository:</strong>
+                <a href="https://github.com/HermeticOrmus/LibreUIUX-Claude-Code"
+                   class="text-blue-300 hover:text-blue-200 underline">
+                    github.com/HermeticOrmus/LibreUIUX-Claude-Code
+                </a>
+            </p>
+            <p class="text-2xl text-white font-semibold">
+                "The craft grows when knowledge flows." 🔥
+            </p>
+        </div>
+    </div>
+</body>
+</html>
