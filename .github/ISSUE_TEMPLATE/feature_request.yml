@@ -1,68 +1,76 @@
 ---
 name: Feature Request
-description: Suggest an improvement or new feature for existing subagents
+description: Suggest a new template, plugin, or improvement
 title: "[FEATURE] "
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for suggesting a feature! Please provide detailed
-        information to help us understand your request.
-
-        **Note**: For new subagent proposals, please use the
-        "New Subagent Proposal" template instead.
+        Thank you for suggesting a feature! Please provide details
+        to help us understand your idea.
 
   - type: checkboxes
     id: preliminary-checks
     attributes:
       label: Preliminary Checks
-      description: Please confirm you have completed these steps
       options:
-        - label: I have read the [Code of Conduct](.github/CODE_OF_CONDUCT.md)
+        - label: I have searched existing issues for similar requests
           required: true
-        - label: >-
-            I have searched existing issues to ensure this is not a duplicate
-          required: true
-        - label: This is a constructive feature request for legitimate use cases
+        - label: This is a constructive feature request
           required: true
 
-  - type: input
-    id: subagent
+  - type: dropdown
+    id: feature-type
     attributes:
-      label: Target Subagent
-      description: Which subagent would this feature enhance?
-      placeholder: e.g., python-pro, frontend-developer, etc.
+      label: Feature Type
+      description: What kind of feature is this?
+      options:
+        - New CLAUDE.md Template
+        - New Plugin (agent/skill/command)
+        - New Prompt Template
+        - Documentation Improvement
+        - Workflow Guide
+        - Tool Integration
+        - Other
     validations:
       required: true
 
   - type: textarea
-    id: problem-description
+    id: problem
     attributes:
       label: Problem Description
       description: What problem does this feature solve?
-      placeholder: Currently, users need to... This is frustrating because...
+      placeholder: |
+        Currently, when I try to..., I have to...
+        This is frustrating because...
     validations:
       required: true
 
   - type: textarea
-    id: proposed-solution
+    id: solution
     attributes:
       label: Proposed Solution
-      description: Describe your preferred solution
-      placeholder: I would like the subagent to be able to...
+      description: Describe your ideal solution
+      placeholder: |
+        I would like LibreUIUX to include...
+        This would allow users to...
     validations:
       required: true
 
   - type: textarea
-    id: use-cases
+    id: examples
     attributes:
-      label: Use Cases
-      description: Provide specific examples of how this would be used
+      label: Examples
+      description: Show how this feature would be used
       placeholder: |
-        1. When developing...
-        2. For projects that...
-        3. To help with...
+        **Example prompt:**
+        "Create a..."
+
+        **Expected output:**
+        ```html
+        <!-- code example -->
+        ```
     validations:
       required: true
 
@@ -71,11 +79,11 @@ body:
     attributes:
       label: Alternatives Considered
       description: Other solutions you've considered
-      placeholder: I also considered... but this wouldn't work because...
+      placeholder: I also considered... but...
 
-  - type: textarea
-    id: additional-context
+  - type: checkboxes
+    id: contribution
     attributes:
-      label: Additional Context
-      description: Any other relevant information
-      placeholder: Add any other context, examples, or screenshots here...
+      label: Contribution
+      options:
+        - label: I would be willing to contribute this feature myself

@@ -1,125 +1,89 @@
-# Contributing to Agents
+# Contributing to LibreUIUX
 
-Thank you for your interest in contributing to this collection of Claude Code subagents! This guide will help you contribute effectively while maintaining a positive community environment.
+Thank you for your interest in improving UI/UX development with Claude Code! This guide will help you contribute effectively.
 
 ## Before You Contribute
 
-1. **Read our [Code of Conduct](.github/CODE_OF_CONDUCT.md)** - All interactions must follow our community standards
-2. **Search existing issues** - Check if your suggestion or bug report already exists
-3. **Use appropriate templates** - Follow the provided issue and PR templates
+1. **Read the [README](../README.md)** - Understand the project structure and philosophy
+2. **Check the [VOICE_GUIDE](../VOICE_GUIDE.md)** - Maintain consistent tone (45% technical, 30% wonder, 20% playful, 5% encouragement)
+3. **Search existing issues** - Avoid duplicates
+4. **Test with Claude Code** - Verify your contributions work
 
 ## Types of Contributions
 
-### Subagent Improvements
-- Bug fixes in existing agent prompts
-- Performance optimizations
-- Enhanced capabilities or instructions
-- Documentation improvements
+### Prompt Templates
+- New component templates for `beginner/prompts/`
+- Improved specificity and modern patterns
+- Before/after examples with exact prompts
 
-### New Subagents
-- Well-defined specialized agents for specific domains
-- Clear use cases and examples
-- Comprehensive documentation
-- Integration with existing workflows
+### Design System Templates
+- CLAUDE.md templates for different use cases
+- Color schemes, typography, spacing systems
+- Component library integrations
 
-### Infrastructure
-- GitHub Actions improvements
-- Template enhancements
-- Community tooling
+### Plugins
+- New skills, agents, or commands
+- Improvements to existing plugins
+- Documentation and examples
+
+### Documentation
+- Workflow guides and tutorials
+- Troubleshooting solutions
+- Case studies and examples
 
 ## Contribution Process
 
 ### 1. Issues First
-- **Always create an issue before starting work** on significant changes
-- Use the appropriate issue template
-- Provide clear, detailed descriptions
-- Include relevant examples or use cases
+For significant changes, create an issue first:
+- Use the appropriate template
+- Describe the problem you're solving
+- Propose your solution
 
 ### 2. Pull Requests
-- Fork the repository and create a feature branch
-- Follow existing code style and formatting
-- Include tests or examples where appropriate
-- Reference the related issue in your PR description
-- Use clear, descriptive commit messages
+- Fork and create a feature branch
+- Follow existing file structure
+- Test everything with Claude Code
+- Include usage examples
 
-### 3. Review Process
-- All PRs require review from maintainers
-- Address feedback promptly and professionally
-- Be patient - reviews may take time
+### 3. Quality Standards
 
-## Content Guidelines
+**For Templates:**
+- [ ] Uses modern design patterns (2024+)
+- [ ] Includes responsive breakpoints
+- [ ] Has hover/focus/active states
+- [ ] Follows accessibility guidelines
+- [ ] Works with Tailwind CSS
 
-### What We Accept
-- ✅ Constructive feedback and suggestions
-- ✅ Well-researched feature requests
-- ✅ Clear bug reports with reproduction steps
-- ✅ Professional, respectful communication
-- ✅ Documentation improvements
-- ✅ Specialized domain expertise
+**For Documentation:**
+- [ ] Follows voice guide
+- [ ] Includes practical examples
+- [ ] Explains "why" not just "what"
+- [ ] Copy-paste ready code
 
-### What We Don't Accept
-- ❌ Hate speech, discrimination, or harassment
-- ❌ Spam, promotional content, or off-topic posts
-- ❌ Personal attacks or inflammatory language
-- ❌ Duplicate or low-effort submissions
-- ❌ Requests for malicious or harmful capabilities
-- ❌ Copyright infringement
+## What We Accept
 
-## Quality Standards
+- ✅ Modern UI patterns and techniques
+- ✅ Working, tested examples
+- ✅ Accessibility improvements
+- ✅ Clear documentation
+- ✅ Tool integrations
 
-### For Subagents
-- Clear, specific domain expertise
-- Well-structured prompt engineering
-- Practical use cases and examples
-- Appropriate safety considerations
-- Integration with existing patterns
+## What We Don't Accept
 
-### For Documentation
-- Clear, concise writing
-- Accurate technical information
-- Consistent formatting and style
-- Practical examples
-
-## Community Guidelines
-
-### Communication
-- **Be respectful** - Treat all community members with dignity
-- **Be constructive** - Focus on improving the project
-- **Be patient** - Allow time for responses and reviews
-- **Be helpful** - Share knowledge and assist others
-
-### Collaboration
-- **Give credit** - Acknowledge others' contributions
-- **Share knowledge** - Help others learn and grow
-- **Stay focused** - Keep discussions on topic
-- **Follow up** - Respond to feedback and requests
-
-## Getting Help
-
-- 📖 **Documentation**: Check existing README files and agent descriptions
-- 💬 **Discussions**: Use GitHub Discussions for questions and brainstorming
-- 🐛 **Issues**: Report bugs or request features through issue templates
-- 📧 **Direct Contact**: Reach out to maintainers for sensitive matters
+- ❌ Untested templates
+- ❌ Outdated design patterns
+- ❌ Low-quality or spammy content
+- ❌ Content violating our Code of Conduct
 
 ## Recognition
 
-Contributors who consistently provide high-quality submissions and maintain professional conduct will be:
+Quality contributors will be:
 - Acknowledged in release notes
-- Given priority review for future contributions
-- Potentially invited to become maintainers
-
-## Enforcement
-
-Violations of these guidelines may result in:
-1. **Warning** - First offense or minor issues
-2. **Temporary restrictions** - Suspension of contribution privileges
-3. **Permanent ban** - Severe or repeated violations
-
-Reports of violations should be made through:
-- GitHub's built-in reporting tools
-- Issues tagged with `moderation`
-- Direct contact with maintainers
+- Listed in CONTRIBUTORS.md
+- Invited to maintain specific areas
 
 ---
 
-Thank you for helping make this project a welcoming, productive environment for everyone!
+**Questions?** Open a discussion or issue. We're here to help.
+
+*The craft grows when knowledge flows.*
