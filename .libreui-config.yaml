@@ -1,0 +1,189 @@
+# ╔═══════════════════════════════════════════════════════════════════════════╗
+# ║                    LibreUIUX Configuration                                 ║
+# ║           Customize your AI-assisted UI/UX development                     ║
+# ╚═══════════════════════════════════════════════════════════════════════════╝
+#
+# This file configures how LibreUIUX works in your project.
+# Claude Code reads this file to personalize UI generation.
+
+version: "1.0.0"
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# YOUR LEVEL - Start here, grow as needed
+# ═══════════════════════════════════════════════════════════════════════════
+
+level: beginner  # beginner | intermediate | advanced
+#
+# beginner     - Get modern components immediately with templates
+# intermediate - Build systematic design workflows
+# advanced     - Full automation with custom agents and commands
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# DESIGN SYSTEM - Your visual language
+# ═══════════════════════════════════════════════════════════════════════════
+
+design_system:
+  # Overall aesthetic
+  style: modern  # modern | minimal | bold | playful | corporate
+
+  # Component libraries (what Claude should reference)
+  libraries:
+    primary: shadcn-ui          # shadcn-ui | radix | headless-ui | mui | chakra
+    animation: motion-primitives # motion-primitives | framer-motion | react-spring | none
+    icons: lucide               # lucide | heroicons | phosphor | feather | tabler
+
+  # Tailwind configuration
+  tailwind:
+    enabled: true
+    preset: default             # default | typography | forms | aspect-ratio
+
+  # Color scheme
+  colors:
+    mode: light                 # light | dark | auto
+    primary: blue               # blue | indigo | violet | emerald | amber | rose
+    neutral: gray               # gray | slate | zinc | neutral | stone
+
+  # Typography
+  typography:
+    font_sans: Inter            # Inter | Geist | Plus Jakarta Sans | DM Sans
+    font_mono: JetBrains Mono   # JetBrains Mono | Fira Code | Source Code Pro
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# ACCESSIBILITY - Non-negotiable standards
+# ═══════════════════════════════════════════════════════════════════════════
+
+accessibility:
+  level: AA                     # A | AA | AAA (WCAG level)
+  requirements:
+    screen_reader: true         # Always include ARIA labels
+    keyboard_nav: true          # All interactive elements focusable
+    color_contrast: true        # Minimum 4.5:1 ratio
+    motion_reduced: true        # Respect prefers-reduced-motion
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# COMPONENT DEFAULTS - Consistent look and feel
+# ═══════════════════════════════════════════════════════════════════════════
+
+components:
+  # Border radius scale
+  radius: lg                    # none | sm | md | lg | xl | full
+
+  # Animation intensity
+  animation: subtle             # none | subtle | playful | dramatic
+
+  # Shadow depth
+  shadows: md                   # none | sm | md | lg | dramatic
+
+  # Spacing base (in pixels)
+  spacing_base: 4
+
+  # Default component size
+  size: md                      # sm | md | lg
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# OUTPUT PREFERENCES - How code is generated
+# ═══════════════════════════════════════════════════════════════════════════
+
+output:
+  # Framework
+  framework: react              # react | vue | svelte | html | nextjs
+
+  # Styling approach
+  styling: tailwind             # tailwind | css-modules | styled-components | css
+
+  # TypeScript
+  typescript: true
+
+  # Component structure
+  component_style: functional   # functional | class (for React)
+
+  # Include comments
+  comments: minimal             # none | minimal | detailed
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# ENABLED MODULES - What capabilities are active
+# ═══════════════════════════════════════════════════════════════════════════
+
+modules:
+  # Core features
+  design_vocabulary: true       # Modern UI term definitions
+  component_templates: true     # Pre-built component patterns
+
+  # Quality checks
+  accessibility_checker: true   # WCAG compliance validation
+  responsive_validator: true    # Mobile-first verification
+
+  # Enhancements
+  animation_suggestions: true   # Recommend micro-interactions
+  color_harmony: true          # Suggest complementary colors
+
+  # Advanced (requires advanced level)
+  custom_agents: false          # Project-specific agents
+  mcp_integration: false        # Chrome DevTools integration
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PERSONALIZATION - For personalized explanations (optional)
+# ═══════════════════════════════════════════════════════════════════════════
+
+profile:
+  # Your interests (for analogies when explaining concepts)
+  interests: []
+  # Example: ["gaming", "cooking", "music", "architecture"]
+
+  # Your experience level
+  experience: ""
+  # Example: "2 years frontend development"
+
+  # Your current projects
+  projects: []
+  # Example: ["SaaS dashboard", "E-commerce site", "Portfolio"]
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PATHS - Where files are created
+# ═══════════════════════════════════════════════════════════════════════════
+
+paths:
+  components: src/components    # Where components go
+  styles: src/styles           # Where styles go
+  assets: public/assets        # Where assets go
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# INTEGRATION - Connect with your tools
+# ═══════════════════════════════════════════════════════════════════════════
+
+integrations:
+  # Figma (for design-to-code)
+  figma:
+    enabled: false
+    file_key: ""               # Your Figma file key
+
+  # Storybook (for component documentation)
+  storybook:
+    enabled: false
+    auto_generate: false       # Generate stories automatically
+
+  # Testing
+  testing:
+    framework: ""              # vitest | jest | playwright
+    auto_generate: false       # Generate tests automatically
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# NOTES
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# After editing this file:
+# 1. Claude Code will automatically use these settings
+# 2. You can override per-request with specific instructions
+# 3. Run `/ui-status` to verify your configuration
+#
+# For help: https://github.com/HermeticOrmus/LibreUIUX-Claude-Code
