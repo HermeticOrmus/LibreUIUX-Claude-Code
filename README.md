@@ -1,14 +1,104 @@
 # LibreUIUX for Claude Code
 
-> **The Ultimate Resource for Modern, Beautiful UI/UX with Claude Code**
+> **Skills, Agents, Commands, and Workflows for Modern UI/UX Development with Claude Code**
 
 Stop getting the same outdated, Bootstrap-era designs. This repository provides a comprehensive, layered approach to dramatically improve the UI/UX components Claude Code generates for your projects.
 
 ---
 
-## 🎯 The Problem
+## The New Programming Paradigm
 
-Developers using Claude Code consistently face these challenges:
+In December 2025, Andrej Karpathy observed that programming is being "dramatically refactored":
+
+> *"I've never felt this much behind as a programmer. The profession is being dramatically refactored."*
+>
+> *"New vocabulary: agents, subagents, their prompts, contexts, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSP, slash commands, workflows, IDE integrations..."*
+
+He described Claude Code as *"the first convincing demonstration of what an LLM Agent looks like"* - a "little spirit/ghost that lives on your computer."
+
+**LibreUIUX provides the skills, agents, commands, and workflows for this new paradigm - focused on UI/UX development.**
+
+### Where LibreUIUX Fits
+
+| New Stack Component | LibreUIUX Provides |
+|---------------------|-------------------|
+| **Skills** | 68 specialized skills (accessibility, animation, design systems, etc.) |
+| **Agents** | 153 task-specific agents (UI validator, design critic, responsive checker, etc.) |
+| **Commands** | 80 slash commands for common UI/UX workflows |
+| **Plugins** | 68 domain plugins (frontend, accessibility, design mastery, etc.) |
+| **Workflows** | Beginner to advanced learning paths |
+
+This isn't just a prompt library. It's infrastructure for the new way we build software with AI.
+
+---
+
+## What's Included
+
+```
+LibreUIUX-Claude-Code/
+├── 68 Plugins         # Domain-specific collections
+├── 153 Agents         # Task-specialized AI personas
+├── 80 Commands        # Slash commands for Claude Code
+├── 68 Skills          # Reusable capability modules
+├── 3 Skill Levels     # Beginner → Intermediate → Advanced
+└── Templates          # Ready-to-use configurations
+```
+
+### Plugin Categories
+
+| Category | Plugins | Description |
+|----------|---------|-------------|
+| **Frontend & UI** | design-mastery, frontend-mobile-development, accessibility-compliance | Core UI/UX development |
+| **Backend Integration** | backend-development, api-scaffolding, database-design | Full-stack patterns |
+| **Quality & Testing** | unit-testing, tdd-workflows, code-review-ai | Ensure production quality |
+| **DevOps & Deploy** | cicd-automation, deployment-strategies, kubernetes-operations | Ship with confidence |
+| **Specialized** | game-development, blockchain-web3, machine-learning-ops | Domain expertise |
+
+### Skills vs Commands vs Agents
+
+| Component | When to Use | Example |
+|-----------|-------------|---------|
+| **Skills** | Need domain knowledge applied to a task | `api-design-principles` - teaches REST best practices |
+| **Commands** | Quick, repeatable actions | `/ui-critique` - get instant design feedback |
+| **Agents** | Complex, multi-step work requiring expertise | `frontend-developer` - builds complete components |
+
+---
+
+## Quick Start
+
+### Installation Paths
+
+**Path 1: Just Want Better Prompts?** (5 minutes)
+```bash
+# Browse the beginner prompts
+cat beginner/prompts/modern-component-template.md
+```
+
+**Path 2: Add Commands to Claude Code** (10 minutes)
+```bash
+# Copy commands to your project or global config
+cp -r .claude/commands/* ~/.claude/commands/
+```
+
+**Path 3: Use Specific Plugins** (15 minutes)
+```bash
+# Example: Add design mastery to your project
+cp plugins/design-mastery/agents/* your-project/.claude/agents/
+cp plugins/design-mastery/skills/*/SKILL.md your-project/.claude/skills/
+```
+
+**Path 4: Full Installation** (30 minutes)
+```bash
+# Clone and integrate everything
+git clone https://github.com/your-org/LibreUIUX-Claude-Code.git
+# Follow the advanced setup guide
+```
+
+---
+
+## The Problem
+
+Developers using Claude Code face these challenges:
 
 - **Repetitive Designs**: Claude generates similar-looking components regardless of project context
 - **Outdated Aesthetics**: Components resemble old Bootstrap-era designs (2015-2018)
@@ -84,98 +174,140 @@ This repository provides solutions for **all skill levels**:
 
 ---
 
-## 🚀 Quick Start
-
-### 1. Choose Your Path
-
-```bash
-# Beginner: Just want better prompts?
-cat beginner/prompts/modern-component-template.md
-
-# Intermediate: Setting up a design system?
-cp intermediate/design-systems/modern-web-app.md ./DESIGN_SYSTEM.md
-
-# Advanced: Full automation?
-./advanced/mcp-setup/install-chrome-devtools.sh
-```
-
-### 2. Essential First Steps
-
-**Before asking Claude for ANY UI component:**
-
-1. ✅ Review [Design Vocabulary](./beginner/design-vocabulary.md)
-2. ✅ Use a [Component Template](./beginner/prompts/)
-3. ✅ Reference [Modern Examples](./resources/inspiration/)
-4. ✅ Be specific (not "make it look good", but "use glassmorphism with 8px backdrop blur")
-
----
-
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 LibreUIUX-Claude-Code/
 ├── README.md                          # You are here
 │
-├── beginner/                          # 🟢 Start here if new
+├── plugins/                           # 68 domain-specific plugin collections
+│   ├── design-mastery/               # UI/UX design expertise
+│   │   ├── agents/                   # Specialized AI agents
+│   │   ├── commands/                 # Slash commands
+│   │   └── skills/                   # Reusable skill modules
+│   ├── accessibility-compliance/     # WCAG, ARIA, a11y testing
+│   ├── frontend-mobile-development/  # React, Vue, React Native, etc.
+│   ├── backend-development/          # APIs, databases, architecture
+│   ├── cicd-automation/              # Deployment, pipelines, DevOps
+│   └── ... (63 more plugins)         # See full list below
+│
+├── beginner/                          # Start here if new
 │   ├── README.md                      # Beginner guide overview
 │   ├── design-vocabulary.md           # Learn the language of modern UI
 │   ├── prompts/                       # Ready-to-use prompt templates
-│   │   ├── modern-button.md
-│   │   ├── modern-card.md
-│   │   ├── modern-form.md
-│   │   └── modern-nav.md
 │   ├── checklist.md                   # Pre-request checklist
 │   └── examples/                      # Simple before/after examples
 │
-├── intermediate/                      # 🟡 Build systematic workflows
+├── intermediate/                      # Build systematic workflows
 │   ├── README.md                      # Intermediate guide overview
 │   ├── design-systems/                # Complete design system templates
-│   │   ├── modern-web-app.md
-│   │   ├── saas-platform.md
-│   │   └── mobile-first.md
 │   ├── claude-md-templates/           # CLAUDE.md file templates
-│   ├── component-libraries/           # Integration guides
-│   │   ├── shadcn-ui.md
-│   │   ├── aceternity.md
-│   │   ├── motion-primitives.md
-│   │   └── comparison.md
+│   ├── component-libraries/           # Integration guides (Shadcn, Aceternity)
 │   ├── workflows/                     # Step-by-step workflows
-│   │   ├── iteration-workflow.md
-│   │   └── browser-inspection.md
 │   └── examples/                      # Real project examples
 │
-├── advanced/                          # 🔴 Pro-level automation
+├── advanced/                          # Pro-level automation
 │   ├── README.md                      # Advanced guide overview
 │   ├── mcp-servers/                   # MCP server configurations
-│   │   ├── chrome-devtools/
-│   │   └── design-review/
 │   ├── slash-commands/                # Custom Claude Code commands
-│   │   ├── ui-component.md
-│   │   ├── design-critique.md
-│   │   └── responsive-check.md
 │   ├── automation/                    # Automated workflows
 │   └── examples/                      # Production-level examples
 │
-├── resources/                         # 📚 Curated resources
+├── resources/                         # Curated resources
 │   ├── component-libraries.md         # Library comparisons & links
 │   ├── inspiration/                   # Design inspiration sources
-│   │   ├── vibecoder-collection.md
-│   │   ├── 21st-dev-components.md
-│   │   └── ui-patterns.md
 │   ├── tools.md                       # Recommended tools
 │   └── github-repos.md                # Curated GitHub repositories
 │
-├── templates/                         # 📋 Copy-paste templates
+├── templates/                         # Copy-paste templates
 │   ├── CLAUDE.md                      # Template for project root
 │   ├── design-brief.md                # Design brief template
 │   └── component-spec.md              # Component specification template
 │
-└── .claude/                           # ⚙️ Claude Code configuration
-    └── commands/                      # Custom slash commands
+└── .claude/                           # Claude Code configuration
+    └── commands/                      # Global slash commands
         ├── ui-modern.md
         ├── ui-critique.md
         └── ui-responsive.md
 ```
+
+### All 68 Plugins
+
+<details>
+<summary>Click to expand full plugin list</summary>
+
+| Plugin | Focus Area |
+|--------|------------|
+| accessibility-compliance | WCAG, ARIA, screen readers |
+| agent-orchestration | Multi-agent coordination |
+| api-scaffolding | REST/GraphQL API design |
+| api-testing-observability | API testing & monitoring |
+| application-performance | Frontend/backend optimization |
+| archetypal-alchemy | Design psychology patterns |
+| arm-cortex-microcontrollers | Embedded systems |
+| backend-api-security | Auth, validation, security |
+| backend-development | Server architecture |
+| blockchain-web3 | Smart contracts, DeFi |
+| business-analytics | Data analysis, reporting |
+| cicd-automation | CI/CD pipelines |
+| cloud-infrastructure | AWS, GCP, Azure |
+| codebase-cleanup | Refactoring, debt reduction |
+| code-documentation | Docs generation |
+| code-refactoring | Pattern improvement |
+| code-review-ai | Automated review |
+| comprehensive-review | Full codebase audits |
+| content-marketing | SEO, content strategy |
+| context-management | Claude context optimization |
+| customer-sales-automation | CRM, automation |
+| database-cloud-optimization | DB performance |
+| database-design | Schema, modeling |
+| database-migrations | Safe migrations |
+| data-engineering | ETL, pipelines |
+| data-validation-suite | Input validation |
+| debugging-toolkit | Debug strategies |
+| dependency-management | Package management |
+| deployment-strategies | Blue-green, canary |
+| deployment-validation | Deploy verification |
+| design-mastery | UI/UX excellence |
+| developer-essentials | Core dev workflows |
+| distributed-debugging | Microservice debugging |
+| documentation-generation | Auto-docs |
+| error-debugging | Error analysis |
+| error-diagnostics | Root cause analysis |
+| framework-migration | Version upgrades |
+| frontend-mobile-development | React, Vue, mobile |
+| frontend-mobile-security | XSS, CSRF protection |
+| full-stack-orchestration | End-to-end coordination |
+| functional-programming | FP patterns |
+| game-development | Game engines, graphics |
+| git-pr-workflows | Git best practices |
+| hr-legal-compliance | Privacy, GDPR |
+| incident-response | Outage handling |
+| javascript-typescript | JS/TS patterns |
+| julia-development | Julia lang |
+| jvm-languages | Java, Kotlin, Scala |
+| kubernetes-operations | K8s management |
+| llm-application-dev | AI/LLM apps |
+| machine-learning-ops | MLOps |
+| multi-platform-apps | Cross-platform |
+| observability-monitoring | Logging, metrics |
+| payment-processing | Stripe, payments |
+| performance-testing-review | Load testing |
+| python-development | Python patterns |
+| quantitative-trading | Algo trading |
+| security-compliance | Security audits |
+| security-scanning | Vuln detection |
+| seo-analysis-monitoring | SEO tracking |
+| seo-content-creation | SEO writing |
+| seo-technical-optimization | Technical SEO |
+| shell-scripting | Bash, automation |
+| systems-programming | Low-level dev |
+| tdd-workflows | Test-driven dev |
+| team-collaboration | Team processes |
+| unit-testing | Testing strategies |
+| web-scripting | Scraping, automation |
+
+</details>
 
 ---
 
@@ -385,4 +517,19 @@ If this helps you build better UIs with Claude Code, give us a star! It helps ot
 
 ---
 
-**Built by developers, for developers. Let's make Claude Code UI/UX amazing together.** 🚀
+## Attribution & Inspiration
+
+The framing of this repository was inspired by [Andrej Karpathy's](https://karpathy.ai/) observations about the transformation of programming in the AI era:
+
+**Key Sources:**
+- [LLMs as a New Computing Platform (2025 Year in Review)](https://karpathy.ai/blog/2025-llm-os.html) - Karpathy's comprehensive analysis of how LLMs are becoming a new computing paradigm
+- [X/Twitter Thread on the New Vocabulary](https://x.com/karpathy/status/1872411236358504787) - The December 2025 post describing "agents, subagents, prompts, contexts, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSP, slash commands, workflows"
+
+**On Claude Code specifically:**
+> *"Claude Code is the first convincing demonstration of what an LLM Agent looks like... a little spirit/ghost that lives on your computer, can inspect files, use a browser, can be told to 'just fix all the build errors', or 'write tests for this file'."*
+
+This repository aims to provide the specialized UI/UX infrastructure - skills, agents, commands, and workflows - that Karpathy describes as the new developer toolkit.
+
+---
+
+**Built by developers, for developers. Building the new programming paradigm, one component at a time.**
