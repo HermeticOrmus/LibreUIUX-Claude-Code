@@ -1,0 +1,96 @@
+---
+name: Share a Discovery
+description: Share a prompt pattern, technique, or breakthrough that works well
+title: "[DISCOVERY] "
+labels: ["discovery", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found a prompt that consistently generates great UI? Discovered a
+        technique that works every time? Share it with the community!
+
+        **Gold Hat Philosophy**: The craft grows when knowledge flows.
+
+  - type: input
+    id: discovery-name
+    attributes:
+      label: Discovery Name
+      description: A short, descriptive name
+      placeholder: e.g., "Glassmorphism Card Pattern", "Consistent Button Styling"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Component Pattern (button, card, form, etc.)
+        - Layout Pattern (grid, flex, responsive)
+        - Animation/Interaction
+        - Design System Technique
+        - Prompting Strategy
+        - Tool Integration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: The Prompt That Works
+      description: The exact prompt you use with Claude Code
+      placeholder: |
+        Create a button with:
+        - bg-blue-500 hover:bg-blue-600
+        - text-white font-semibold
+        - px-6 py-3 rounded-lg
+        - shadow-md hover:shadow-lg
+        - transition-all duration-200
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Resulting Output
+      description: What Claude generates (code block)
+      placeholder: |
+        ```html
+        <button class="...">
+          Button Text
+        </button>
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-it-works
+    attributes:
+      label: Why It Works
+      description: Explain the mechanism - why does this produce consistent results?
+      placeholder: |
+        This works because Claude understands Tailwind's scale precisely.
+        When you specify exact values instead of vague terms like "modern",
+        you get reproducible results.
+    validations:
+      required: true
+
+  - type: textarea
+    id: variations
+    attributes:
+      label: Variations (optional)
+      description: Different ways to use this pattern
+      placeholder: |
+        **For secondary button:** Change bg-blue-500 to bg-white border-2 border-gray-300
+        **For danger button:** Change bg-blue-500 to bg-red-500
+
+  - type: checkboxes
+    id: tested
+    attributes:
+      label: Testing
+      options:
+        - label: I have tested this pattern multiple times with consistent results
+          required: true
+        - label: I would like to contribute this to the official templates

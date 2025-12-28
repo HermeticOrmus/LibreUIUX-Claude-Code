@@ -15,7 +15,7 @@ We pledge to act and interact in ways that contribute to an open, welcoming, div
 - Gracefully accepting constructive criticism
 - Focusing on what is best for the community
 - Showing empathy towards other community members
-- Contributing constructively to discussions about AI agents and development
+- Contributing constructively to discussions about UI/UX and Claude Code development
 
 ### Unacceptable Behavior
 
