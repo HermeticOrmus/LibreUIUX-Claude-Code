@@ -90,7 +90,7 @@ cp plugins/design-mastery/skills/*/SKILL.md your-project/.claude/skills/
 **Path 4: Full Installation** (30 minutes)
 ```bash
 # Clone and integrate everything
-git clone https://github.com/your-org/LibreUIUX-Claude-Code.git
+git clone https://github.com/HermeticOrmus/LibreUIUX-Claude-Code.git
 # Follow the advanced setup guide
 ```
 

@@ -351,7 +351,7 @@ Before submitting a PR:
 
 ### 1. Fork & Clone
 ```bash
-git clone https://github.com/[your-username]/LibreUIUX-Claude-Code.git
+git clone https://github.com/YOUR-USERNAME/LibreUIUX-Claude-Code.git
 cd LibreUIUX-Claude-Code
 ```
 
