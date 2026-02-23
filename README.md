@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ormus.solutions/mascot/chain_terminal_to_lotus.gif" alt="LibreUIUX Claude Code" width="128" style="image-rendering: pixelated;" />
+  <img src="https://ormus.solutions/mascot/chain_braces_to_swan.gif" alt="LibreUIUX Claude Code" width="128" style="image-rendering: pixelated;" />
 </p>
 
 <h1 align="center">LibreUIUX Claude Code</h1>
@@ -17,7 +17,6 @@
 </p>
 
 ---
-
 > **Skills, Agents, Commands, and Workflows for Modern UI/UX Development with Claude Code**
 
 Stop getting the same outdated, Bootstrap-era designs. This repository provides a comprehensive, layered approach to dramatically improve the UI/UX components Claude Code generates for your projects.
@@ -88,7 +87,6 @@ LibreUIUX-Claude-Code/
 
 **Path 1: Just Want Better Prompts?** (5 minutes)
 ```bash
-# Browse the beginner prompts
 cat beginner/prompts/modern-component-template.md
 ```
 
