@@ -1,4 +1,22 @@
-# LibreUIUX for Claude Code
+<p align="center">
+  <img src="https://ormus.solutions/mascot/chain_terminal_to_lotus.gif" alt="LibreUIUX Claude Code" width="128" style="image-rendering: pixelated;" />
+</p>
+
+<h1 align="center">LibreUIUX Claude Code</h1>
+
+<p align="center">
+  <em>Complete UI/UX system for Claude Code -- 67 agents, design vocabulary, tested prompts</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/stargazers"><img src="https://img.shields.io/github/stars/HermeticOrmus/LibreUIUX-Claude-Code?style=flat-square&color=aa8142" alt="Stars" /></a>
+  <a href="https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/blob/main/LICENSE"><img src="https://img.shields.io/github/license/HermeticOrmus/LibreUIUX-Claude-Code?style=flat-square&color=aa8142" alt="License" /></a>
+  <a href="https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/commits"><img src="https://img.shields.io/github/last-commit/HermeticOrmus/LibreUIUX-Claude-Code?style=flat-square&color=aa8142" alt="Last Commit" /></a>
+  <img src="https://img.shields.io/badge/TypeScript-aa8142?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Claude Code-aa8142?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code" />
+</p>
+
+---
 
 > **Skills, Agents, Commands, and Workflows for Modern UI/UX Development with Claude Code**
 
