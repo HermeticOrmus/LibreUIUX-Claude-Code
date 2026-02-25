@@ -5,7 +5,7 @@
 <h1 align="center">LibreUIUX Claude Code</h1>
 
 <p align="center">
-  <em>Complete UI/UX system for Claude Code -- 67 agents, design vocabulary, tested prompts</em>
+  <em>Complete UI/UX system for Claude Code -- 152 agents, 70 plugins, 76 commands, 74 skills</em>
 </p>
 
 <p align="center">
@@ -39,10 +39,10 @@ He described Claude Code as *"the first convincing demonstration of what an LLM 
 
 | New Stack Component | LibreUIUX Provides |
 |---------------------|-------------------|
-| **Skills** | 68 specialized skills (accessibility, animation, design systems, etc.) |
-| **Agents** | 153 task-specific agents (UI validator, design critic, responsive checker, etc.) |
-| **Commands** | 80 slash commands for common UI/UX workflows |
-| **Plugins** | 68 domain plugins (frontend, accessibility, design mastery, etc.) |
+| **Skills** | 74 specialized skills (accessibility, animation, design systems, etc.) |
+| **Agents** | 152 task-specific agents (UI validator, design critic, responsive checker, etc.) |
+| **Commands** | 76 slash commands for common UI/UX workflows |
+| **Plugins** | 70 domain plugins (frontend, accessibility, design mastery, etc.) |
 | **Workflows** | Beginner to advanced learning paths |
 
 This isn't just a prompt library. It's infrastructure for the new way we build software with AI.
@@ -53,10 +53,10 @@ This isn't just a prompt library. It's infrastructure for the new way we build s
 
 ```
 LibreUIUX-Claude-Code/
-├── 68 Plugins         # Domain-specific collections
-├── 153 Agents         # Task-specialized AI personas
-├── 80 Commands        # Slash commands for Claude Code
-├── 68 Skills          # Reusable capability modules
+├── 70 Plugins         # Domain-specific collections
+├── 152 Agents         # Task-specialized AI personas
+├── 76 Commands        # Slash commands for Claude Code
+├── 74 Skills          # Reusable capability modules
 ├── 3 Skill Levels     # Beginner → Intermediate → Advanced
 └── Templates          # Ready-to-use configurations
 ```
@@ -87,7 +87,8 @@ LibreUIUX-Claude-Code/
 
 **Path 1: Just Want Better Prompts?** (5 minutes)
 ```bash
-cat beginner/prompts/modern-component-template.md
+# Browse the beginner prompts
+cat beginner/prompts/modern-button.md
 ```
 
 **Path 2: Add Commands to Claude Code** (10 minutes)
@@ -205,14 +206,13 @@ LibreUIUX-Claude-Code/
 │   ├── frontend-mobile-development/  # React, Vue, React Native, etc.
 │   ├── backend-development/          # APIs, databases, architecture
 │   ├── cicd-automation/              # Deployment, pipelines, DevOps
-│   └── ... (63 more plugins)         # See full list below
+│   └── ... (65 more plugins)         # See full list below
 │
 ├── beginner/                          # Start here if new
 │   ├── README.md                      # Beginner guide overview
 │   ├── design-vocabulary.md           # Learn the language of modern UI
 │   ├── prompts/                       # Ready-to-use prompt templates
-│   ├── checklist.md                   # Pre-request checklist
-│   └── examples/                      # Simple before/after examples
+│   └── checklist.md                   # Pre-request checklist
 │
 ├── intermediate/                      # Build systematic workflows
 │   ├── README.md                      # Intermediate guide overview
@@ -247,7 +247,7 @@ LibreUIUX-Claude-Code/
         └── ui-responsive.md
 ```
 
-### All 68 Plugins
+### All 70 Plugins
 
 <details>
 <summary>Click to expand full plugin list</summary>
@@ -305,6 +305,7 @@ LibreUIUX-Claude-Code/
 | kubernetes-operations | K8s management |
 | llm-application-dev | AI/LLM apps |
 | machine-learning-ops | MLOps |
+| mcp-integrations | MCP server tools & browser DevTools |
 | multi-platform-apps | Cross-platform |
 | observability-monitoring | Logging, metrics |
 | payment-processing | Stripe, payments |
@@ -321,6 +322,7 @@ LibreUIUX-Claude-Code/
 | tdd-workflows | Test-driven dev |
 | team-collaboration | Team processes |
 | unit-testing | Testing strategies |
+| vibe-coding | Rapid AI-assisted prototyping |
 | web-scripting | Scraping, automation |
 
 </details>
@@ -332,7 +334,7 @@ LibreUIUX-Claude-Code/
 ### Week 1: Fundamentals
 1. Read [Design Vocabulary](./beginner/design-vocabulary.md)
 2. Try 3 component prompts from [beginner/prompts/](./beginner/prompts/)
-3. Study [examples/](./beginner/examples/) to see before/after transformations
+3. Practice with the prompts to see before/after transformations
 
 ### Week 2: Systems Thinking
 1. Choose a [design system template](./intermediate/design-systems/)

@@ -82,7 +82,7 @@ but with our brand colors (purple primary, dark background)"
 
 ## 📖 Essential Concepts
 
-### Modern Design Patterns (2024-2025)
+### Modern Design Patterns (2025-2026)
 
 #### Glassmorphism
 Frosted glass effect with blur

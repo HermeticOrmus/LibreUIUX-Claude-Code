@@ -31,7 +31,7 @@ When the user runs `/ui-modern [component]`, create a modern component with thes
 - If found, use those tokens and conventions
 - If not found, use modern defaults below
 
-### 2. Modern Design Patterns (2024-2025)
+### 2. Modern Design Patterns (2025-2026)
 
 Apply current design trends:
 
