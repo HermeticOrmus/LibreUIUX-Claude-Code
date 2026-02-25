@@ -1716,7 +1716,7 @@
     {
       "name": "python-development",
       "source": "./plugins/python-development",
-      "description": "Modern Python development with Python 3.12+, Django, FastAPI, async patterns, and production best practices",
+      "description": "Modern Python development with Python 3.13+, Django, FastAPI, async patterns, and production best practices",
       "version": "1.2.1",
       "author": {
         "name": "Seth Hobson",
@@ -1902,7 +1902,7 @@
     {
       "name": "julia-development",
       "source": "./plugins/julia-development",
-      "description": "Modern Julia development with Julia 1.10+, package management, scientific computing, high-performance numerical code, and production best practices",
+      "description": "Modern Julia development with Julia 1.11+, package management, scientific computing, high-performance numerical code, and production best practices",
       "version": "1.0.0",
       "author": {
         "name": "Community Contribution",

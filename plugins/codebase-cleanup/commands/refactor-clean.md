@@ -536,7 +536,7 @@ Is it causing production bugs?
             └─ NO → Priority: LOW (Backlog)
 ```
 
-### 6. Modern Code Quality Practices (2024-2025)
+### 6. Modern Code Quality Practices (2025-2026)
 
 **AI-Assisted Code Review Integration**
 
