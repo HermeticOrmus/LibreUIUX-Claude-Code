@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ormus.solutions/mascot/chain_braces_to_swan.gif" alt="LibreUIUX Claude Code" width="128" style="image-rendering: pixelated;" />
+  <img src="https://ormus.solutions/mascot/golden_swan.gif" alt="LibreUIUX Claude Code" width="128" style="image-rendering: pixelated;" />
 </p>
 
 <h1 align="center">LibreUIUX Claude Code</h1>
