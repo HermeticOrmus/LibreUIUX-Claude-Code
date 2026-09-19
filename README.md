@@ -83,33 +83,45 @@ LibreUIUX-Claude-Code/
 
 ## Quick Start
 
+Prefer the dedicated walkthrough: **[QUICK_START.md](./QUICK_START.md)** (about 5 minutes).
+
 ### Installation Paths
 
-**Path 1: Just Want Better Prompts?** (5 minutes)
+**Path 1: Drop-in CLAUDE.md** (fastest — recommended)
 ```bash
-# Browse the beginner prompts
-cat beginner/prompts/modern-button.md
+cd your-project
+curl -fsSL https://raw.githubusercontent.com/HermeticOrmus/LibreUIUX-Claude-Code/main/templates/CLAUDE.modern-webapp.md -o CLAUDE.md
+claude
 ```
 
-**Path 2: Add Commands to Claude Code** (10 minutes)
+**Path 2: Just want better prompts?** (5 minutes)
 ```bash
-# Copy commands to your project or global config
+# Browse beginner prompts after cloning
+git clone --depth 1 https://github.com/HermeticOrmus/LibreUIUX-Claude-Code.git
+cat LibreUIUX-Claude-Code/beginner/prompts/modern-button.md
+```
+
+**Path 3: Add commands to Claude Code** (10 minutes)
+```bash
 cp -r .claude/commands/* ~/.claude/commands/
 ```
 
-**Path 3: Use Specific Plugins** (15 minutes)
+**Path 4: Use a specific plugin** (15 minutes)
 ```bash
-# Example: Add design mastery to your project
+# Example: design mastery
+mkdir -p your-project/.claude/agents your-project/.claude/skills
 cp plugins/design-mastery/agents/* your-project/.claude/agents/
-cp plugins/design-mastery/skills/*/SKILL.md your-project/.claude/skills/
+# copy individual skill folders as needed from plugins/design-mastery/skills/
 ```
 
-**Path 4: Full Installation** (30 minutes)
+**Path 5: Full installation**
 ```bash
-# Clone and integrate everything
 git clone https://github.com/HermeticOrmus/LibreUIUX-Claude-Code.git
-# Follow the advanced setup guide
+cd LibreUIUX-Claude-Code
+# see QUICK_START.md and beginner/README.md
 ```
+
+Contributions: see **[CONTRIBUTING.md](./CONTRIBUTING.md)**. License: **[MIT](./LICENSE)**.
 
 ---
 
@@ -525,7 +537,7 @@ The craft grows when knowledge flows.
 
 ## 📜 License
 
-MIT License - feel free to use this in your projects, commercial or otherwise.
+[MIT License](./LICENSE) — free to use in your projects, commercial or otherwise. See [CONTRIBUTING.md](./CONTRIBUTING.md) if you want to improve the commons.
 
 ---
 
