@@ -1,3 +1,8 @@
+---
+name: major-arcana
+description: "The 22 Major Arcana cards mapped to color palettes, lighting, gradients, and moods for UI. Use when a design needs a symbolic color system or atmosphere, or when a user names a card such as the Sun, the Moon, or the Hermit."
+---
+
 # Major Arcana → Color Palettes & Moods
 
 ## Overview

@@ -1,3 +1,8 @@
+---
+name: archetypal-combinations
+description: "Rules and worked examples for combining an archetype (structure and behavior) with a Major Arcana card (color and mood) into one coherent design system. Use when pairing an archetype with a card, resolving conflicts between them, or generating a full system from a combination such as Hero+Sun."
+---
+
 # Archetypal Combinations: Alchemy Engine
 
 ## Overview

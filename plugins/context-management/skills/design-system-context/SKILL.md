@@ -1,6 +1,6 @@
 ---
 name: design-system-context
-description: Managing design tokens and system context for LLM-driven UI development. Covers loading, persisting, and optimizing design decisions within context windows.
+description: "Keeping a design system in an LLM's context: loading tokens compactly, persisting design decisions across sessions, handling multiple variants, and budgeting the context window. Use when generated UI drifts from the design system, or when setting up tokens and decisions so every session and agent uses the same ones."
 ---
 
 # Design System Context Management

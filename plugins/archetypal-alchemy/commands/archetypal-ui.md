@@ -1,6 +1,7 @@
 ---
 name: archetypal-ui
-description: Generate UI components using Jungian archetypes + Major Arcana color alchemy (e.g., Hero+Sun, Magician+Moon). Combines behavioral patterns with symbolic color palettes for meaningful design.
+description: Generate a UI component from a Jungian archetype paired with a Major Arcana card
+argument-hint: "[Archetype]+[Card] for [component], e.g. Hero+Sun for pricing cards"
 ---
 
 # Archetypal UI Generation

@@ -1,6 +1,6 @@
 ---
 name: rapid-prototyping
-description: Embrace vibe coding for rapid UI exploration. Covers when to iterate vs refine, ephemeral app patterns, and the art of fast, disposable prototyping with AI-assisted development.
+description: "Fast, disposable UI prototyping with AI: when to stay in vibe mode and when to switch to craft mode, throwaway prototype protocols, variant explosion, prompt patterns for quick iteration, and how to carry a validated prototype toward production. Use when exploring UI ideas, building throwaway demos for feedback, or deciding whether a prototype is ready to harden."
 ---
 
 # Rapid Prototyping with Vibe Coding

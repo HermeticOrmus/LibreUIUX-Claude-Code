@@ -1,3 +1,8 @@
+---
+name: jungian-archetypes
+description: "The twelve Jungian brand archetypes mapped to UI structure: layout, typography, motion, and interaction patterns for each. Use when a brand or product is framed as an archetype (Hero, Sage, Rebel, Caregiver, and so on) and the interface should behave like it."
+---
+
 # Jungian Archetypes → UI/UX Aesthetics
 
 ## Overview
