@@ -37,3 +37,9 @@ body:
       label: Want to fix it?
       options:
         - label: I would like to open a pull request that sharpens the description.
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: If this feedback leads to a change, you may credit my GitHub handle in the changelog and release notes.
