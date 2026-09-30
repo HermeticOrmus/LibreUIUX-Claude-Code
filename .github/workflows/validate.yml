@@ -35,3 +35,37 @@ jobs:
             claude plugin install "$p@$mk"
           done
           claude plugin list
+
+  grok:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Grok manifest matches the Claude manifest
+        run: python3 scripts/sync-grok-manifest.py --check
+      - name: Install the Grok Build CLI
+        run: |
+          curl -fsSL https://x.ai/cli/install.sh | bash
+          echo "$HOME/.grok/bin" >> "$GITHUB_PATH"
+      - name: Validate every plugin with Grok
+        run: |
+          set -euo pipefail
+          for p in $(jq -r '.plugins[].source | strings' .claude-plugin/marketplace.json); do
+            echo "::group::$p"
+            grok plugin validate "$p"
+            echo "::endgroup::"
+          done
+      - name: Install every plugin into a clean Grok home
+        run: |
+          set -euo pipefail
+          export GROK_HOME="$RUNNER_TEMP/grok-home"
+          mkdir -p "$GROK_HOME"
+          if [[ -f .grok-plugin/marketplace.json ]]; then
+            grok plugin marketplace add "$GITHUB_WORKSPACE"
+            mk="$(basename "$GITHUB_WORKSPACE")"
+            for p in $(jq -r '.plugins[].name' .grok-plugin/marketplace.json); do
+              grok plugin install "$p@$mk" --trust
+            done
+          else
+            grok plugin install "$GITHUB_WORKSPACE" --trust
+          fi
+          grok plugin list
