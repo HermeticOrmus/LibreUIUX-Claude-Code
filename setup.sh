@@ -10,7 +10,7 @@
 # With --grok it registers the checkout as a Grok Build marketplace and
 # installs through the grok CLI instead, the same as running:
 #   grok plugin marketplace add HermeticOrmus/LibreUIUX-Claude-Code
-#   grok plugin install <plugin>@libreuiux
+#   grok plugin install <plugin>@LibreUIUX-Claude-Code
 #
 # Usage:
 #   ./setup.sh                      install every plugin
