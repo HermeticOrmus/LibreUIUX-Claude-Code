@@ -1,0 +1,39 @@
+name: Routing miss
+description: Claude picked the wrong agent or skill, or did not pick one when it should have.
+title: "[Routing] "
+labels: ["routing-miss"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every agent, skill and command here has a description that tells Claude when to use it. When Claude picks the wrong one, or none, the description is what needs fixing. These reports are some of the most useful feedback we get, and they are often a good first contribution to fix yourself.
+  - type: textarea
+    id: prompt
+    attributes:
+      label: What you asked
+      description: The prompt or request, as close to verbatim as you can share. For example, "audit this checkout form for contrast and focus states".
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: What should have run
+      placeholder: "plugin:agent-or-skill, e.g. accessibility-compliance:accessibility-audit"
+    validations:
+      required: true
+  - type: input
+    id: actual
+    attributes:
+      label: What ran instead
+      placeholder: "another agent or skill, e.g. frontend-mobile-development:frontend-developer, or nothing"
+  - type: input
+    id: version
+    attributes:
+      label: Versions
+      placeholder: "claude --version, and the plugin version from /plugin"
+  - type: checkboxes
+    id: fix
+    attributes:
+      label: Want to fix it?
+      options:
+        - label: I would like to open a pull request that sharpens the description.
