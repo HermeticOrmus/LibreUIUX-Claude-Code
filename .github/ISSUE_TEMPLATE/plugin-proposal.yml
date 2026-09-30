@@ -1,0 +1,47 @@
+name: Plugin proposal
+description: Propose a new plugin, agent, skill or command for this pack.
+title: "[Proposal] "
+labels: ["plugin-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Good proposals name a real job people do in this domain, what Claude gets wrong today without it, and how anyone could check it works. Accepted proposals can become Menu items that you or someone else builds.
+  - type: input
+    id: name
+    attributes:
+      label: Working name
+      placeholder: "kebab-case, e.g. design-token-sync"
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: The job it does
+      description: Who needs it (a designer, a frontend developer, an accessibility reviewer), and what they are trying to get done.
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: What goes wrong today without it
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: A check anyone could run to see it works. For example, a prompt such as "turn this Figma export into Tailwind tokens", the agent or skill that should answer, and what the answer must contain.
+    validations:
+      required: true
+  - type: textarea
+    id: prior
+    attributes:
+      label: Prior art
+      description: Other packs, tools or docs that do something similar, with links. For example wshobson/agents ui-design, Impeccable, or UI UX Pro Max.
+  - type: checkboxes
+    id: build
+    attributes:
+      label: Want to build it?
+      options:
+        - label: I would like to build this and open a pull request.
