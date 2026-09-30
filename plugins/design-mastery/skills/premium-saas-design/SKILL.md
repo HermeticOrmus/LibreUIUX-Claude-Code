@@ -1,11 +1,11 @@
 ---
 name: premium-saas-design
-description: Professional framework for building premium $5k+ SaaS websites with AI - the Define, Build, Review, Refine loop used by real product teams
+description: "The Define, Build, Review, Refine loop and seven context artifacts (brief, content, mood boards, section specs, style guide, PRD, tasks) for building a premium SaaS marketing site with AI. Use when planning or building a SaaS landing page and you want the design context written down before any code."
 ---
 
 # Premium SaaS Design Framework
 
-> "75% of users won't trust a company if the design doesn't look good."
+> In Stanford's large 2002 web credibility study (B.J. Fogg and colleagues), a site's visual design was the factor people mentioned most often when they judged whether to trust it.
 
 This skill captures the professional design workflow used by senior product teams and UI/UX designers, adapted for AI-assisted development. The framework transforms AI from a "guessing machine" into a true design partner.
 

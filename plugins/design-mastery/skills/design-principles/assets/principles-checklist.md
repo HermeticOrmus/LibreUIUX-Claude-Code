@@ -68,7 +68,7 @@ Use this checklist to evaluate any design against fundamental principles.
 - [ ] Generous white space around important elements
 - [ ] Grid system creates predictable rhythm
 - [ ] Responsive behavior is considered
-- [ ] Touch targets are at least 44x44px
+- [ ] Touch targets are at least 24x24px (WCAG 2.2 AA), ideally 44x44px
 
 ## Alignment
 

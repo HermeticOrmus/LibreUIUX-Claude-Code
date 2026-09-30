@@ -1,6 +1,6 @@
 ---
 name: design-movements
-description: Historical design movements and their enduring influence. Understand Bauhaus, Swiss International Style, Art Deco, Memphis, and more. Use when choosing an aesthetic direction, understanding cultural context, or predicting trend cycles.
+description: "Design movements from Arts and Crafts through Bauhaus, Swiss Style, Memphis, and grunge to flat design and current styles, with context, visual markers, and UI tokens for each. Use when choosing an aesthetic direction, explaining why a style reads the way it does, or applying a period style without misusing it."
 ---
 
 # Design Movements
@@ -161,7 +161,7 @@ shadows: sharp, dramatic
 #### Key Figures
 - Walter Gropius (architecture)
 - László Moholy-Nagy (photography)
-- Josef Albers (color theory)
+- Josef Albers (preliminary course; his color teaching came later, at Black Mountain and Yale)
 - Herbert Bayer (typography)
 
 #### Modern Application
@@ -181,7 +181,7 @@ typography: geometric sans (Futura, Avant Garde)
 borders: minimal, functional
 ```
 
-**Legacy**: Google Material Design, IKEA, modern corporate identity
+**Legacy**: Modern design education (the preliminary course), the New Bauhaus in Chicago, Black Mountain College, HfG Ulm, and the functional modernism behind corporate identity
 
 ---
 
@@ -295,7 +295,7 @@ When a brand needs to feel:
 
 ---
 
-### Memphis Group (1981-1987)
+### Memphis Group (1980-1987)
 **Origin**: Milan, Italy
 **Reaction To**: Good taste and minimalist seriousness
 **Core Belief**: Anti-design; pleasure over function
@@ -336,7 +336,7 @@ shadows: offset, colored
 ---
 
 ### Grunge/Deconstructivism (1990s)
-**Origin**: Pacific Northwest → Global
+**Origin**: Southern California editorial design (Beach Culture, Ray Gun), Seattle music graphics (Art Chantry, Sub Pop), London (Neville Brody, The Face), with the theory from Cranbrook and Emigre → Global
 **Reaction To**: Clean corporate design; digital tools enabling mess
 **Core Belief**: Destroy legibility; design as art
 
@@ -367,7 +367,7 @@ When a brand needs to feel:
 
 ### Flat Design (2010s)
 **Origin**: Microsoft Metro → Apple iOS 7 → Web
-**Reaction To**: Skeuomorphic excess; need for responsive design
+**Reaction To**: Skeuomorphic excess (it arrived alongside responsive design and high-density screens)
 **Core Belief**: Digital should look digital
 
 #### Visual Markers
@@ -409,7 +409,7 @@ We're in a post-ideological moment. No single style dominates. Success comes fro
 
 ## Cyclical Pattern
 
-Styles tend to return on ~30-year cycles:
+A common observation rather than a law: styles often return about a generation later. The pairs below are loose illustrations, not a measured cycle:
 
 | Original Era | Revival Era |
 |--------------|-------------|
@@ -419,14 +419,22 @@ Styles tend to return on ~30-year cycles:
 | 1990s grunge | 2020s brutalism |
 | Y2K aesthetic | 2025-2030s (predicted) |
 
-**Prediction**: Expect a 1990s deconstructivist/grunge revival in the late 2020s.
+**Speculation**: a 1990s deconstructivist/grunge revival would fit the pattern; treat it as a hypothesis, not a forecast.
 
 ---
 
 ## Resources
 
+Read the matching file when a task needs a movement in depth: origins and context, key figures and works with dates, visual markers, UI tokens with Tailwind or CSS snippets, accessibility cautions, and common misreadings.
+
+- **references/arts-and-crafts.md**: Morris, the moral case for craft, and artisanal UI
+- **references/art-nouveau.md**: Whiplash curves, Mucha, Guimard, and ornament used with restraint
 - **references/bauhaus.md**: Complete Bauhaus history and application
 - **references/swiss-international.md**: Grid systems and Swiss principles
+- **references/psychedelic.md**: 1960s poster art, vibrating color, and where it breaks accessibility
+- **references/postmodernism.md**: Venturi, Weingart, Greiman, and layered complexity
 - **references/memphis-group.md**: Memphis patterns and colors
+- **references/grunge-deconstructivism.md**: Carson, Brody, Emigre, Cranbrook, and expressive layers over readable text
+- **references/flat-design.md**: Skeuomorphism, Metro, flat, Material, neumorphism, glassmorphism, and current styles
 - **references/art-deco.md**: Deco geometry and application
 - **references/minimalism.md**: Less-is-more philosophy

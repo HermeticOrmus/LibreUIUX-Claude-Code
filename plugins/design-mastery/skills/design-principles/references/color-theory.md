@@ -138,7 +138,7 @@ Color meanings vary by culture:
 | Content Type | Minimum Ratio | Tailwind Example |
 |--------------|---------------|------------------|
 | Body text | 4.5:1 | gray-600 on white |
-| Large text (18px+) | 3:1 | gray-500 on white |
+| Large text (24px+ regular, about 18.66px+ bold) | 3:1 | gray-500 on white |
 | UI components | 3:1 | blue-600 for buttons |
 | Non-essential | None | Decorative elements |
 
@@ -152,7 +152,7 @@ Color meanings vary by culture:
 | Type | Affected Colors | Prevalence |
 |------|-----------------|------------|
 | Protanopia | Red-green | 1% of males |
-| Deuteranopia | Red-green | 6% of males |
+| Deuteranopia | Red-green | About 1% of males (the milder deuteranomaly affects about 5%) |
 | Tritanopia | Blue-yellow | 0.01% of all |
 
 **Solutions**:
@@ -192,7 +192,8 @@ const palette = {
     900: '#111827',
   },
 
-  // Semantic (choose accessible options)
+  // Semantic. The 500 steps suit fills, icons, and large graphics.
+  // As text on white they fail 4.5:1 (green-500 is about 2.3:1): use the 700 step for text.
   success: '#22c55e',  // green-500
   warning: '#f59e0b',  // amber-500
   error: '#ef4444',    // red-500

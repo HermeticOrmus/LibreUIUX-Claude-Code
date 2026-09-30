@@ -1,6 +1,6 @@
 ---
 name: design-masters
-description: Deep knowledge of legendary designers and their enduring contributions. Learn from Saul Bass, Massimo Vignelli, Dieter Rams, Paula Scher, and others whose work defines excellence. Use when seeking inspiration, understanding design history, or applying proven approaches.
+description: "Working profiles of Saul Bass, Massimo Vignelli, Dieter Rams, Paula Scher, Josef Müller-Brockmann, David Carson, and Paul Rand: key works, principles, and how to apply each in UI work. Use when a design needs a proven approach, a named reference to follow, or a lesson from a specific master."
 ---
 
 # Design Masters
@@ -58,21 +58,22 @@ Approach:
 3. **Pragmatics**: How does it function in context?
 4. **Discipline**: Constraint breeds creativity
 5. **Appropriateness**: Fit context, not ego
-6. **Ambiguity**: Eliminate it
+6. **Ambiguity**: Welcome a plurality of meanings; reject vagueness
 7. **Design is One**: Universal principles apply everywhere
 8. **Visual Power**: Strength through simplicity
 9. **Intellectual Elegance**: Clever, not complicated
 10. **Timelessness**: Enduring over fashionable
-11. **Responsibility**: Design affects lives
-12. **Equity**: Quality for all, not just elites
+11. **Responsibility**: To the work itself, to the client (economically sound solutions), and to the public
+12. **Equity**: Respect the recognition an established mark has earned; do not redesign for change's sake
 
 #### Limited Typography
-Vignelli used only 5 typefaces in his career:
+Vignelli argued that a designer needs only a few basic typefaces. His 1991 exhibition "A Few Basic Typefaces" showed decades of work set in only four:
 - Helvetica (universal clarity)
 - Bodoni (elegant contrast)
 - Century Expanded (readable serifs)
-- Futura (geometric purity)
 - Garamond (classical warmth)
+
+He also used Futura, and The Vignelli Canon allows a few more (Times among them) while holding that most typefaces exist for commercial reasons, not need.
 
 #### Essential Works
 - **NYC Subway Map** (1972): Clarity over geography
@@ -154,8 +155,8 @@ Process:
 
 #### Essential Works
 - **The Public Theater** (1994): Type as urban texture
-- **Citibank** (1998): Humanizing corporate identity
-- **Windows 8** (2012): Metro design language
+- **Citi** (1999): Humanizing corporate identity after the Citicorp and Travelers merger
+- **Windows 8 logo** (2012): The window flag redrawn as a window in perspective (the logo, not Microsoft's Metro design language)
 - **High Line** (2009): Environmental typography
 
 #### Apply Her Lesson
@@ -237,9 +238,9 @@ Implementation:
 - Found textures
 
 #### Essential Works
-- **Ray Gun Magazine** (1992-96): Design as culture
+- **Ray Gun** (art director from 1992): Design as culture
 - **Beach Culture**: Breaking every rule
-- **End of Print** (book): Philosophy articulated
+- **The End of Print** (1995 book with Lewis Blackwell): His work and approach collected
 
 #### Apply His Lesson
 *When appropriate, prioritize feeling over reading.*
@@ -260,13 +261,13 @@ Caution: Use sparingly
 **Philosophy**: "Simplicity is not the goal. It is the by-product of a good idea."
 
 #### Logo Philosophy
-A logo must be:
-- **Distinctive**: Unlike anything else
-- **Visible**: Works at any size
-- **Adaptable**: Applies to all media
-- **Memorable**: Sticks after brief exposure
-- **Universal**: Crosses cultural boundaries
-- **Timeless**: Outlasts trends
+From his essay "Logos, Flags, and Escutcheons" (1991):
+- **A logo identifies**: It is a flag or a signature, not an advertisement
+- **Meaning comes later**: A mark takes its meaning from the quality of what it stands for
+- **Not a description**: It rarely needs to show what the business does
+- **Reproducible**: It must work in one color and at very small sizes
+
+Checks that follow from this (a working list, not Rand's wording): distinctive, legible at any size, adaptable across media, memorable, and durable beyond current trends.
 
 #### The Rand Process
 1. Understand the essence of the organization
@@ -301,9 +302,12 @@ A logo must be:
 
 ## Resources
 
+Read the matching profile when a task names a master or needs their method in depth. Each covers key works with dates, the principles to borrow, how to apply them in UI work, and common misreadings.
+
 - **references/saul-bass.md**: Complete Bass analysis
 - **references/massimo-vignelli.md**: The Vignelli Canon explained
 - **references/dieter-rams.md**: 10 Principles applied to digital
 - **references/paula-scher.md**: Typography as expression
 - **references/david-carson.md**: Breaking rules intentionally
 - **references/josef-muller-brockmann.md**: Grid systems mastery
+- **references/paul-rand.md**: Logo thinking, wit, and identity systems

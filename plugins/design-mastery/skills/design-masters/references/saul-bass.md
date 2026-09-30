@@ -16,9 +16,10 @@ Saul Bass transformed graphic design from decoration into communication. Before 
 | Vertigo | 1958 | Spirals representing psychological descent |
 | Anatomy of a Murder | 1959 | Fragmented body as crime abstraction |
 | Psycho | 1960 | Fractured lines as shattered psyche |
-| The Shining | 1980 | Aerial isolation, yellow VW Beetle |
 | Goodfellas | 1990 | Red text bleeding into black |
 | Casino | 1995 | Fire consuming identity |
+
+Bass also designed posters for films whose titles he did not make, among them The Shining (1980); its aerial opening footage is Kubrick's.
 
 ### Corporate Identities
 
@@ -27,9 +28,9 @@ Saul Bass transformed graphic design from decoration into communication. Before 
 | AT&T | 1984 | Globe lines = global connection |
 | United Airlines | 1974 | 'U' as protective wings |
 | Minolta | 1981 | Horizon in letterform |
-| Kleenex | 1981 | Tissue rising from box |
+| Kleenex | 1961 | Tissue rising from box |
 | Girl Scouts | 1978 | Profiles creating profiles |
-| Continental Airlines | 1968 | Jet trail as globe |
+| Continental Airlines | 1967 | Jet trail as globe |
 
 ## Design Philosophy
 

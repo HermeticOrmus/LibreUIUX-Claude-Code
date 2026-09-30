@@ -1,6 +1,6 @@
 ---
 name: design-principles
-description: Core visual design principles that underpin all great design. Master gestalt psychology, visual hierarchy, composition, color theory, and typography fundamentals. Use when making design decisions or evaluating designs against proven principles.
+description: "Core visual design principles (visual hierarchy, Gestalt grouping, composition, balance, contrast, white space, color, typography) with UI fixes, a checklist, and deep-dive references. Use when making or defending a layout, type, or color decision, or when a design feels off and you need to name why."
 ---
 
 # Design Principles
@@ -89,12 +89,14 @@ Lines don't need to be visible—implied lines work.
 *The mind completes incomplete shapes.*
 
 Useful for:
-- Logo design (WWF panda, FedEx arrow)
+- Logo design (the WWF panda)
 - Icon design (implied shapes)
 - Cards that bleed off screen (implies more content)
 
 #### Figure/Ground
 *Clear separation between subject and background.*
+
+Classic example: the arrow in the negative space between the E and x of the FedEx logo.
 
 Common failures:
 - Text on busy image backgrounds
@@ -125,7 +127,7 @@ For web layouts:
 
 ### 4. Golden Ratio (1:1.618)
 
-**The Law**: Proportions found in nature feel inherently pleasing.
+**The Law**: A proportion that recurs in art and architecture. Evidence for an innate preference for it is weak and mixed, so treat it as one useful ratio among others (1.25, 1.333, 1.5).
 
 Applications:
 - Content width to sidebar: `1:1.618`
@@ -136,7 +138,7 @@ Tailwind approximation:
 ```
 Base unit: 16px (text-base)
 Medium:    24px (text-2xl ≈ 16 × 1.5)
-Large:     40px (text-4xl ≈ 16 × 2.5)
+Large:     36px (text-4xl = 2.25rem ≈ 16 × 2.25)
 ```
 
 ### 5. Visual Balance
@@ -159,7 +161,7 @@ Large:     40px (text-4xl ≈ 16 × 2.5)
 | Size | Larger = heavier |
 | Color | Darker, saturated = heavier |
 | Complexity | Detailed = heavier |
-| Position | Lower = heavier |
+| Position | Higher in the frame = heavier (Arnheim) |
 | Isolation | Alone = heavier |
 
 ### 6. Alignment
@@ -215,7 +217,7 @@ Types of contrast:
 
 **Minimum contrast requirements**:
 - Body text: 4.5:1 ratio (WCAG AA)
-- Large text (18px+): 3:1 ratio
+- Large text (24px+ regular, or about 18.66px+ bold): 3:1 ratio
 - UI components: 3:1 ratio
 
 ### 9. White Space (Negative Space)
@@ -268,6 +270,8 @@ Take any element and place it elsewhere. Does it still feel like it belongs? If 
 | "It feels off balance" | Balance | Redistribute visual weight |
 
 ## Resources
+
+Read the matching file when a decision needs more depth than the summary above.
 
 - **references/gestalt-principles.md**: Deep dive on perceptual grouping
 - **references/visual-hierarchy.md**: Comprehensive hierarchy techniques

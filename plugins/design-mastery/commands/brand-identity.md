@@ -1,6 +1,7 @@
 ---
 name: brand-identity
-description: Guided workflow for creating comprehensive brand identity systems. Walks through discovery, strategy, visual identity, and guidelines creation.
+description: Guide a brand identity build from discovery and strategy through visual identity to guidelines
+argument-hint: "[company, product, or project]"
 ---
 
 # Brand Identity Builder
