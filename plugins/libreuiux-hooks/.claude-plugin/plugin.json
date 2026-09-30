@@ -1,0 +1,19 @@
+{
+  "name": "libreuiux-hooks",
+  "version": "1.0.0",
+  "description": "Optional hooks for UI projects: one line of stack context at session start, a confirmation prompt before editing secrets files, and accessibility and design-system hints after UI file edits.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "hooks",
+    "accessibility",
+    "design-systems",
+    "ui-ux",
+    "wcag"
+  ]
+}
