@@ -280,6 +280,7 @@ LibreUIUX-Claude-Code/
 ├── setup.sh                           # Install the plugins through the Claude Code CLI
 ├── bootstrap.sh                       # Add a CLAUDE.md template and config to a project
 ├── NOTICE.md                          # Credit and license for the wshobson/agents plugins
+├── pantry/                            # Research and the Menu of open work (pantry/MENU.md)
 │
 └── .claude/                           # Claude Code configuration for this repo
     ├── agents/
@@ -478,6 +479,16 @@ The craft grows when knowledge flows.
 ## Feedback
 
 Starred this? Tell us what worked and what is missing: [open a feedback issue](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues/new?template=feedback.yml). Every piece of feedback gets an answer, and changes that come from it are credited in the release notes. For questions and open-ended ideas, use [GitHub Discussions](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/discussions).
+
+---
+
+## Contribute
+
+- Take an item from the [Menu](./pantry/MENU.md): each one has a Done-when anyone can check. Open items are [`[menu]` issues](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues?q=is%3Aopen+label%3Amenu).
+- New here? Start with the [good first issues](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/contribute).
+- Use a form: [feedback](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues/new?template=feedback.yml), [routing miss](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues/new?template=routing-miss.yml) when Claude picks the wrong agent or skill, or [plugin proposal](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues/new?template=plugin-proposal.yml) for a new plugin, agent, skill or command.
+- Show what you built in [Discussions, Show and tell](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/discussions/categories/show-and-tell).
+- The plugin layout and the commands to test a change locally are in [CONTRIBUTING.md](./CONTRIBUTING.md#ways-to-contribute).
 
 ---
 
