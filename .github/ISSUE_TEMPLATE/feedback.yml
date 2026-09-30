@@ -1,0 +1,41 @@
+name: Feedback
+description: Tell us what worked, what is missing, and what to build next.
+title: "[Feedback] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying this. Every piece of feedback gets read and answered. When feedback turns into a change, the release notes say so, and credit you if you tick the box at the bottom.
+  - type: input
+    id: using-for
+    attributes:
+      label: What are you using it for?
+      placeholder: "redesigning a dashboard, building a component library"
+    validations:
+      required: true
+  - type: input
+    id: plugins
+    attributes:
+      label: Which plugins, agents, or skills did you use?
+      placeholder: "Names as they appear in /plugin, or 'just browsing'"
+  - type: textarea
+    id: worked
+    attributes:
+      label: What worked well?
+  - type: textarea
+    id: missing
+    attributes:
+      label: What is missing, wrong, or got in your way?
+    validations:
+      required: true
+  - type: textarea
+    id: next
+    attributes:
+      label: If you could add one thing next, what would it be?
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: If this feedback leads to a change, you may credit my GitHub handle in the changelog and release notes.
