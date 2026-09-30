@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- A public pantry in `pantry/`: a competitor map, an X mine, a people mine and a pantry queue, every row cited. `pantry/MENU.md` is generated from the queue, never edited by hand, and names the next piece of work anyone can pick up.
+- Two issue forms, with labels of the same names: `routing-miss`, for when Claude picks the wrong agent or skill, and `plugin-proposal`, for a new plugin, agent, skill or command.
+- A "Ways to contribute" section at the top of CONTRIBUTING.md (Menu items, routing misses, new plugins and their layout, translations, Show and tell) with the commands to test a change locally, a pointer to it in `.github/CONTRIBUTING.md`, and a Contribute section in the README.
+
 ## [2.0.0] - 2026-09-30
 
 A major release because the marketplace name changes. Every plugin keeps its name, and nothing is removed. See "Migrating from 1.x" in the README.
