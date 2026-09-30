@@ -1,0 +1,37 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  plugins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Install the Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validate the marketplace manifest
+        run: claude plugin validate .
+      - name: Validate every plugin
+        run: |
+          set -euo pipefail
+          for p in $(jq -r '.plugins[].source | strings' .claude-plugin/marketplace.json); do
+            echo "::group::$p"
+            claude plugin validate --strict "$p"
+            echo "::endgroup::"
+          done
+      - name: Install every plugin into a clean config
+        run: |
+          set -euo pipefail
+          export CLAUDE_CONFIG_DIR="$RUNNER_TEMP/claude-config"
+          claude plugin marketplace add "$GITHUB_WORKSPACE"
+          mk=$(jq -r '.name' .claude-plugin/marketplace.json)
+          for p in $(jq -r '.plugins[].name' .claude-plugin/marketplace.json); do
+            claude plugin install "$p@$mk"
+          done
+          claude plugin list
