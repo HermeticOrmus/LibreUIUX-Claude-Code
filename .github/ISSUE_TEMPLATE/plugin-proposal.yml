@@ -45,3 +45,9 @@ body:
       label: Want to build it?
       options:
         - label: I would like to build this and open a pull request.
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: If this feedback leads to a change, you may credit my GitHub handle in the changelog and release notes.
