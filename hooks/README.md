@@ -2,6 +2,15 @@
 
 > Automated UI/UX quality checks for Claude Code sessions
 
+> **Install these as a plugin instead.** The `libreuiux-hooks` plugin (`plugins/libreuiux-hooks/`) registers the same three hooks for you, reads Claude Code's JSON hook input with `jq`, answers in the documented hook output format, and writes no log files:
+>
+> ```
+> /plugin marketplace add HermeticOrmus/LibreUIUX-Claude-Code
+> /plugin install libreuiux-hooks@libreuiux
+> ```
+>
+> The scripts in this directory are kept as the original reference implementation. Note that Claude Code reads hook `timeout` values in seconds, so the `5000` and `2000` timeouts in `settings.json` mean that many seconds, not milliseconds.
+
 ## Overview
 
 This hooks system provides automated assistance for UI/UX development workflows. It detects design systems, validates accessibility, checks color contrast, and provides contextual guidance when editing UI-related files.
