@@ -103,6 +103,23 @@ From a clone, `./setup.sh` installs every plugin through the Claude Code CLI (`.
 
 To drop a LibreUIUX `CLAUDE.md` template and config into a project instead, run `./bootstrap.sh` from inside that project (this was `setup.sh` before 2.0.0).
 
+### Install in Grok Build
+
+Grok Build loads the same plugin folders. Add the marketplace and install a plugin from a terminal:
+
+```bash
+grok plugin marketplace add HermeticOrmus/LibreUIUX-Claude-Code
+grok plugin install design-mastery@libreuiux
+```
+
+Or install one plugin straight from its folder, with no marketplace:
+
+```bash
+grok plugin install HermeticOrmus/LibreUIUX-Claude-Code#plugins/design-mastery
+```
+
+From a clone, `./setup.sh --grok` installs every plugin through the `grok` CLI; `--only`, `--list`, and `--uninstall` work the same way. Grok Build uninstalls plugins by name only, and 66 plugin names here are also in [claude-code-game-development](https://github.com/HermeticOrmus/claude-code-game-development) (both packs take them from wshobson/agents), as is `design-mastery` in [design-mastery-claude-code](https://github.com/HermeticOrmus/design-mastery-claude-code). If you install more than one of these packs, remove one with `./setup.sh --grok --uninstall` rather than `grok plugin uninstall <name>`, which can take the other pack's copy. The `libreuiux-hooks` plugin uses a hook format Grok Build supports, but it has not been verified in a live Grok session yet.
+
 ### Migrating from 1.x
 
 Version 2.0.0 renames the marketplace from `claude-code-workflows` to `libreuiux`. The old name is also the name of [wshobson/agents](https://github.com/wshobson/agents), so anyone with that marketplace installed could not add this one. The plugins keep their names.
