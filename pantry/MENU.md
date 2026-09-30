@@ -24,11 +24,11 @@ Counts: open 8, in flight 0, shipped 0, parked 0, dropped 0, needs fixing 0
 |-----|-------|-------|------------|-------|-------|---------|-------|---------|
 | a11y-skills-sync | Bring upstream's accessibility skills into accessibility-compliance (`a11y-skills-sync`) | open | medium | repo | 2026-09-30 | 6 | - | - |
 | browser-loop-guide | Write the Chrome DevTools MCP setup guide the README links (`browser-loop-guide`) | open | high | repo | 2026-09-30 | 1 | - | - |
-| case-studies | Write the two case studies the README promises (`case-studies`) | open | medium | repo | 2026-09-30 | 4 | - | - |
+| case-studies | Write the two case studies the README promises (`case-studies`) | open | medium | repo | 2026-09-30 | 4 | #6 | - |
 | design-to-code | Build a design-to-code plugin for tokens and responsive layouts (`design-to-code`) | open | medium | repo | 2026-09-30 | 7 | - | - |
 | link-check-ci | Check relative Markdown links in CI (`link-check-ci`) | open | high | repo | 2026-09-30 | 3 | - | - |
 | other-harnesses | Document LibreUIUX skills in Cursor, Codex and Gemini CLI (`other-harnesses`) | open | medium | repo | 2026-09-30 | 8 | - | - |
-| ui-commands-plugin | Package the root .claude UI commands and synthesis-master as a plugin (`ui-commands-plugin`) | open | high | repo | 2026-09-30 | 2 | - | - |
+| ui-commands-plugin | Package the root .claude UI commands and synthesis-master as a plugin (`ui-commands-plugin`) | open | high | repo | 2026-09-30 | 2 | #8 | - |
 | upstream-ui-design | Port the upstream ui-design plugin with credit (`upstream-ui-design`) | open | medium | repo | 2026-09-30 | 5 | - | - |
 
 ## Retired
