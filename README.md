@@ -497,6 +497,8 @@ The craft grows when knowledge flows.
 
 Starred this? Tell us what worked and what is missing: [open a feedback issue](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues/new?template=feedback.yml). Every piece of feedback gets an answer, and changes that come from it are credited in the release notes. For questions and open-ended ideas, use [GitHub Discussions](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/discussions).
 
+Cracks we found and sealed: [LEDGER.md](LEDGER.md).
+
 ---
 
 ## Contribute
