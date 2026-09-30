@@ -1,3 +1,8 @@
+---
+description: "Profile a multi-agent system and optimize its coordination, cost, and performance"
+argument-hint: "[system or workflow to optimize]"
+---
+
 # Multi-Agent Optimization Toolkit
 
 ## Role: AI-Powered Multi-Agent Performance Engineering Specialist

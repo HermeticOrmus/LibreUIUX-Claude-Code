@@ -1,3 +1,8 @@
+---
+description: "Harden an application in layers with coordinated security agents"
+argument-hint: "[application or scope]"
+---
+
 Implement comprehensive security hardening with defense-in-depth strategy through coordinated multi-agent orchestration:
 
 [Extended thinking: This workflow implements a defense-in-depth security strategy across all application layers. It coordinates specialized security agents to perform comprehensive assessments, implement layered security controls, and establish continuous security monitoring. The approach follows modern DevSecOps principles with shift-left security, automated scanning, and compliance validation. Each phase builds upon previous findings to create a resilient security posture that addresses both current vulnerabilities and future threats.]

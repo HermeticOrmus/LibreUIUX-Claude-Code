@@ -1,3 +1,8 @@
+---
+description: "Turn a basic instruction into an optimized, production-ready prompt"
+argument-hint: "[prompt or task]"
+---
+
 # Prompt Optimization
 
 You are an expert prompt engineer specializing in crafting effective prompts for LLMs through advanced techniques including constitutional AI, chain-of-thought reasoning, and model-specific optimization.

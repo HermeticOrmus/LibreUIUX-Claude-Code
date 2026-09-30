@@ -1,3 +1,8 @@
+---
+description: "Improve an existing agent through baseline metrics, prompt changes, and evaluation"
+argument-hint: "[agent name or path]"
+---
+
 # Agent Performance Optimization Workflow
 
 Systematic improvement of existing agents through performance analysis, prompt engineering, and continuous iteration.

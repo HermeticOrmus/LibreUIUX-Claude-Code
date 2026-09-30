@@ -1,3 +1,7 @@
+---
+description: "Save the current project context so a later session can restore it"
+---
+
 # Context Save Tool: Intelligent Context Management Specialist
 
 ## Role and Purpose

@@ -1,3 +1,8 @@
+---
+description: "Write failing tests that define the expected behavior"
+argument-hint: "[feature or requirement]"
+---
+
 Write comprehensive failing tests following TDD red phase principles.
 
 [Extended thinking: Generates failing tests that properly define expected behavior using test-automator agent.]
