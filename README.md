@@ -5,7 +5,7 @@
 <h1 align="center">LibreUIUX Claude Code</h1>
 
 <p align="center">
-  <em>Complete UI/UX system for Claude Code -- 152 agents, 70 plugins, 76 commands, 74 skills</em>
+  <em>Complete UI/UX system for Claude Code -- 71 plugins, 152 agents, 76 commands, 74 skills, 3 hooks</em>
 </p>
 
 <p align="center">
@@ -40,9 +40,10 @@ He described Claude Code as *"the first convincing demonstration of what an LLM 
 | New Stack Component | LibreUIUX Provides |
 |---------------------|-------------------|
 | **Skills** | 74 specialized skills (accessibility, animation, design systems, etc.) |
-| **Agents** | 152 task-specific agents (UI validator, design critic, responsive checker, etc.) |
-| **Commands** | 76 slash commands for common UI/UX workflows |
-| **Plugins** | 70 domain plugins (frontend, accessibility, design mastery, etc.) |
+| **Agents** | 152 agent definitions across the plugins (93 distinct agents; shared ones such as `code-reviewer` ship in several plugins) |
+| **Commands** | 76 slash commands across the plugins (65 distinct) |
+| **Plugins** | 71 installable plugins (frontend, accessibility, design mastery, etc.) |
+| **Hooks** | 3 optional hooks in `libreuiux-hooks` (stack context, secrets-file confirmation, accessibility hints) |
 | **Workflows** | Beginner to advanced learning paths |
 
 This isn't just a prompt library. It's infrastructure for the new way we build software with AI.
@@ -53,10 +54,11 @@ This isn't just a prompt library. It's infrastructure for the new way we build s
 
 ```
 LibreUIUX-Claude-Code/
-├── 70 Plugins         # Domain-specific collections
-├── 152 Agents         # Task-specialized AI personas
-├── 76 Commands        # Slash commands for Claude Code
+├── 71 Plugins         # Installable from the libreuiux marketplace
+├── 152 Agents         # Task-specialized AI personas (93 distinct)
+├── 76 Commands        # Slash commands for Claude Code (65 distinct)
 ├── 74 Skills          # Reusable capability modules
+├── 3 Hooks            # Optional, in the libreuiux-hooks plugin
 ├── 3 Skill Levels     # Beginner → Intermediate → Advanced
 └── Templates          # Ready-to-use configurations
 ```
@@ -82,6 +84,32 @@ LibreUIUX-Claude-Code/
 ---
 
 ## Quick Start
+
+### Install from Claude Code
+
+```
+/plugin marketplace add HermeticOrmus/LibreUIUX-Claude-Code
+/plugin install design-mastery@libreuiux
+```
+
+Install any other plugin the same way (`/plugin install accessibility-compliance@libreuiux`), or browse them all with `/plugin`. The same thing from a terminal:
+
+```bash
+claude plugin marketplace add HermeticOrmus/LibreUIUX-Claude-Code
+claude plugin install design-mastery@libreuiux
+```
+
+From a clone, `./setup.sh` installs every plugin through the Claude Code CLI (`./setup.sh --list` to see them, `--only design-mastery,accessibility-compliance` for a subset, `--scope project` for one project, `--uninstall` to remove them). The optional hooks are one more plugin: `/plugin install libreuiux-hooks@libreuiux`. Restart Claude Code after installing.
+
+To drop a LibreUIUX `CLAUDE.md` template and config into a project instead, run `./bootstrap.sh` from inside that project (this was `setup.sh` before 2.0.0).
+
+### Migrating from 1.x
+
+Version 2.0.0 renames the marketplace from `claude-code-workflows` to `libreuiux`. The old name is also the name of [wshobson/agents](https://github.com/wshobson/agents), so anyone with that marketplace installed could not add this one. The plugins keep their names.
+
+1. Run `/plugin marketplace list` (or `claude plugin marketplace list` in a terminal) and check which repository `claude-code-workflows` points to.
+2. Only if it points to `HermeticOrmus/LibreUIUX-Claude-Code`, remove it: `/plugin marketplace remove claude-code-workflows`. If it points to `wshobson/agents`, leave it alone.
+3. Add this repository again: `/plugin marketplace add HermeticOrmus/LibreUIUX-Claude-Code`, then reinstall what you use as `<plugin>@libreuiux`.
 
 Prefer the dedicated walkthrough: **[QUICK_START.md](./QUICK_START.md)** (about 5 minutes).
 
@@ -209,7 +237,7 @@ This repository provides solutions for **all skill levels**:
 LibreUIUX-Claude-Code/
 ├── README.md                          # You are here
 │
-├── plugins/                           # 68 domain-specific plugin collections
+├── plugins/                           # 71 installable plugins
 │   ├── design-mastery/               # UI/UX design expertise
 │   │   ├── agents/                   # Specialized AI agents
 │   │   ├── commands/                 # Slash commands
@@ -218,48 +246,53 @@ LibreUIUX-Claude-Code/
 │   ├── frontend-mobile-development/  # React, Vue, React Native, etc.
 │   ├── backend-development/          # APIs, databases, architecture
 │   ├── cicd-automation/              # Deployment, pipelines, DevOps
+│   ├── libreuiux-hooks/              # Optional hooks (session context, secrets, a11y hints)
 │   └── ... (65 more plugins)         # See full list below
 │
 ├── beginner/                          # Start here if new
 │   ├── README.md                      # Beginner guide overview
 │   ├── design-vocabulary.md           # Learn the language of modern UI
-│   ├── prompts/                       # Ready-to-use prompt templates
+│   ├── prompts/                       # Ready-to-use prompt templates (button, card, form, nav)
 │   └── checklist.md                   # Pre-request checklist
 │
 ├── intermediate/                      # Build systematic workflows
 │   ├── README.md                      # Intermediate guide overview
-│   ├── design-systems/                # Complete design system templates
-│   ├── claude-md-templates/           # CLAUDE.md file templates
-│   ├── component-libraries/           # Integration guides (Shadcn, Aceternity)
-│   ├── workflows/                     # Step-by-step workflows
-│   └── examples/                      # Real project examples
+│   ├── design-systems/                # Design system template (modern web app)
+│   └── workflows/                     # Iteration workflow
 │
 ├── advanced/                          # Pro-level automation
-│   ├── README.md                      # Advanced guide overview
-│   ├── mcp-servers/                   # MCP server configurations
-│   ├── slash-commands/                # Custom Claude Code commands
-│   ├── automation/                    # Automated workflows
-│   └── examples/                      # Production-level examples
+│   └── README.md                      # Advanced guide overview
 │
 ├── resources/                         # Curated resources
 │   ├── component-libraries.md         # Library comparisons & links
-│   ├── inspiration/                   # Design inspiration sources
 │   ├── tools.md                       # Recommended tools
 │   └── github-repos.md                # Curated GitHub repositories
 │
-├── templates/                         # Copy-paste templates
+├── templates/                         # Copy-paste CLAUDE.md templates
 │   ├── CLAUDE.md                      # Template for project root
-│   ├── design-brief.md                # Design brief template
-│   └── component-spec.md              # Component specification template
+│   ├── CLAUDE.minimal.md
+│   ├── CLAUDE.mobile-first.md
+│   ├── CLAUDE.modern-webapp.md
+│   └── CLAUDE.saas-platform.md
 │
-└── .claude/                           # Claude Code configuration
-    └── commands/                      # Global slash commands
+├── hooks/                             # Original hook scripts (use the libreuiux-hooks plugin)
+├── demo/                              # Demo page and checklist
+├── setup.sh                           # Install the plugins through the Claude Code CLI
+├── bootstrap.sh                       # Add a CLAUDE.md template and config to a project
+├── NOTICE.md                          # Credit and license for the wshobson/agents plugins
+│
+└── .claude/                           # Claude Code configuration for this repo
+    ├── agents/
+    │   └── synthesis-master.md
+    └── commands/                      # Slash commands (copy to ~/.claude/commands to use elsewhere)
         ├── ui-modern.md
         ├── ui-critique.md
-        └── ui-responsive.md
+        ├── ui-responsive.md
+        ├── ui-review.md
+        └── ui-synth.md
 ```
 
-### All 70 Plugins
+### All 71 Plugins
 
 <details>
 <summary>Click to expand full plugin list</summary>
@@ -271,7 +304,7 @@ LibreUIUX-Claude-Code/
 | api-scaffolding | REST/GraphQL API design |
 | api-testing-observability | API testing & monitoring |
 | application-performance | Frontend/backend optimization |
-| archetypal-alchemy | Design psychology patterns |
+| archetypal-alchemy \* | Design psychology patterns |
 | arm-cortex-microcontrollers | Embedded systems |
 | backend-api-security | Auth, validation, security |
 | backend-development | Server architecture |
@@ -296,7 +329,7 @@ LibreUIUX-Claude-Code/
 | dependency-management | Package management |
 | deployment-strategies | Blue-green, canary |
 | deployment-validation | Deploy verification |
-| design-mastery | UI/UX excellence |
+| design-mastery \* | UI/UX excellence |
 | developer-essentials | Core dev workflows |
 | distributed-debugging | Microservice debugging |
 | documentation-generation | Auto-docs |
@@ -315,9 +348,10 @@ LibreUIUX-Claude-Code/
 | julia-development | Julia lang |
 | jvm-languages | Java, Kotlin, Scala |
 | kubernetes-operations | K8s management |
+| libreuiux-hooks \* | Optional hooks: stack context, secrets-file confirmation, accessibility hints |
 | llm-application-dev | AI/LLM apps |
 | machine-learning-ops | MLOps |
-| mcp-integrations | MCP server tools & browser DevTools |
+| mcp-integrations \* | MCP server tools & browser DevTools |
 | multi-platform-apps | Cross-platform |
 | observability-monitoring | Logging, metrics |
 | payment-processing | Stripe, payments |
@@ -334,8 +368,10 @@ LibreUIUX-Claude-Code/
 | tdd-workflows | Test-driven dev |
 | team-collaboration | Team processes |
 | unit-testing | Testing strategies |
-| vibe-coding | Rapid AI-assisted prototyping |
+| vibe-coding \* | Rapid AI-assisted prototyping |
 | web-scripting | Scraping, automation |
+
+\* Original to LibreUIUX. The other 66 plugins derive from [wshobson/agents](https://github.com/wshobson/agents) by Seth Hobson (MIT); see [NOTICE.md](./NOTICE.md).
 
 </details>
 
@@ -439,6 +475,12 @@ The craft grows when knowledge flows.
 
 ---
 
+## Feedback
+
+Starred this? Tell us what worked and what is missing: [open a feedback issue](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues/new?template=feedback.yml). Every piece of feedback gets an answer, and changes that come from it are credited in the release notes. For questions and open-ended ideas, use [GitHub Discussions](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/discussions).
+
+---
+
 ## 🤝 Contributing
 
 This is a **knowledge commons**, not just a repository. Every contribution raises our collective understanding of UI/UX development with AI.
@@ -539,11 +581,19 @@ The craft grows when knowledge flows.
 
 [MIT License](./LICENSE) — free to use in your projects, commercial or otherwise. See [CONTRIBUTING.md](./CONTRIBUTING.md) if you want to improve the commons.
 
+The plugins derived from wshobson/agents keep their original MIT copyright (Copyright (c) 2024 Seth Hobson). [NOTICE.md](./NOTICE.md) lists them and reproduces the upstream license.
+
 ---
 
 ## ⭐ Star This Repo
 
 If this helps you build better UIs with Claude Code, give us a star! It helps others discover these resources.
+
+---
+
+## Acknowledgments
+
+66 of the 71 plugins here derive from **[wshobson/agents](https://github.com/wshobson/agents)** by **[Seth Hobson](https://github.com/wshobson)**, the Claude Code plugin marketplace this repository was forked from, released under the MIT License. The engineering plugins (backend, testing, DevOps, security, languages, and more), their agents, commands, and skills are his work and that of the wshobson/agents contributors, including Ryan Snodgrass. LibreUIUX adds the UI/UX layer on top: design-mastery, archetypal-alchemy, mcp-integrations, vibe-coding, libreuiux-hooks, the learning paths, and the templates. [NOTICE.md](./NOTICE.md) has the full list and the upstream license.
 
 ---
 
