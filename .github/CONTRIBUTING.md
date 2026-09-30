@@ -2,6 +2,10 @@
 
 Thank you for your interest in improving UI/UX development with Claude Code! This guide will help you contribute effectively.
 
+## Ways to contribute
+
+Pick up an item from the Menu ([`pantry/MENU.md`](../pantry/MENU.md)), report a routing miss, propose a plugin, translate, or share what you built. The root [CONTRIBUTING.md](../CONTRIBUTING.md#ways-to-contribute) has each path, the plugin layout, and the commands to test a change locally.
+
 ## Before You Contribute
 
 1. **Read the [README](../README.md)** - Understand the project structure and philosophy

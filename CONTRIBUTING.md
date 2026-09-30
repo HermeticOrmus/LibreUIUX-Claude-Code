@@ -4,6 +4,61 @@ Welcome to the knowledge commons! This isn't just a repo—it's a collective map
 
 ---
 
+## Ways to contribute
+
+### Take a Menu item
+
+[`pantry/MENU.md`](pantry/MENU.md) lists the next pieces of work, each with a Done-when anyone can check, and names one as up next. The research behind it (competitor map, posts on X, what people said here) sits beside it in [`pantry/`](pantry/). Open items are [`[menu]` issues](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues?q=is%3Aopen+label%3Amenu); smaller starting points are under [good first issues](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/contribute). Claim one by commenting on its issue, then open a pull request that says `Closes #N`.
+
+### Report or fix a routing miss
+
+Every agent, command and skill has a `description` that tells Claude when to use it. When Claude picks the wrong one, or none, open a [routing miss](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues/new?template=routing-miss.yml) with the prompt, what should have run, and what ran instead. The fix is usually a sharper `description` in that file's frontmatter, which makes it a good first pull request.
+
+### Propose or build a plugin
+
+Open a [plugin proposal](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/issues/new?template=plugin-proposal.yml) first, so the job it does and its Done-when are agreed before you write it. A plugin in this repo has this layout:
+
+```text
+plugins/<name>/
+├── .claude-plugin/plugin.json     # name, version, description, author, homepage, repository, license, keywords
+├── README.md                      # what it does, with one example prompt
+├── agents/<agent>.md              # frontmatter: name, description ("Use this agent when ..."), model: inherit
+├── commands/<command>.md          # frontmatter: description, argument-hint if it takes input
+└── skills/<skill>/SKILL.md        # frontmatter: name, description ("Use when ...")
+```
+
+A plugin needs only the folders it uses. Add an entry for it to `.claude-plugin/marketplace.json` with `name`, `source` (`./plugins/<name>`), `description`, `version`, `author`, `homepage`, `repository`, `license`, `keywords` and `category`, matching the entries around it. `plugins/design-mastery/` and `plugins/archetypal-alchemy/` are good patterns to copy. A plugin derived from [wshobson/agents](https://github.com/wshobson/agents) keeps its upstream author and gets a line in [NOTICE.md](NOTICE.md). When the plugin count changes, update the counts in the README.
+
+### Translate
+
+The docs are in English only. A translation of the beginner path is a good place to start: add it next to the original with the language code (for example `beginner/README.es.md`), link it from the English file, and label the pull request `translation`.
+
+### Share what you built
+
+Post it in [Discussions, Show and tell](https://github.com/HermeticOrmus/LibreUIUX-Claude-Code/discussions/categories/show-and-tell): the prompt, the plugins you used, and a before and after. Good ones can become examples or Menu items.
+
+### Test your change locally
+
+```bash
+# Load one plugin from your working tree for a single session, without installing it
+claude --plugin-dir ./plugins/<name>
+
+# Validate the marketplace, then your plugin (CI treats warnings as errors with --strict)
+claude plugin validate .
+claude plugin validate --strict ./plugins/<name>
+
+# Install from your checkout into a throwaway config, the way CI does; your own config is untouched
+export CLAUDE_CONFIG_DIR=$(mktemp -d)
+claude plugin marketplace add ./
+claude plugin install <name>@libreuiux
+claude plugin details <name>@libreuiux   # lists the agents and skills Claude Code found (commands show up as skills)
+unset CLAUDE_CONFIG_DIR
+```
+
+CI ([`.github/workflows/validate.yml`](.github/workflows/validate.yml)) runs the same checks on every pull request: it validates the marketplace, validates every plugin with `--strict`, and installs every plugin into a clean config. A first-time contributor's CI run waits until a maintainer approves it, so a pending check on your first pull request is expected.
+
+---
+
 ## 🎯 Philosophy
 
 **We share knowledge, not secrets.**
