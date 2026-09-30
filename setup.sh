@@ -61,7 +61,14 @@ if [[ -n "$ONLY" ]]; then
 fi
 
 if (( UNINSTALL )); then
-  for p in "${SELECTED[@]}"; do claude plugin uninstall "$p@$MARKETPLACE" || true; done
+  # Only uninstall what is installed, so a partial install does not print a
+  # "not found" error for every other plugin in the pack.
+  installed=$(claude plugin list 2>/dev/null | grep -o "[^ ]*@$MARKETPLACE" || true)
+  for p in "${SELECTED[@]}"; do
+    if grep -qx -- "$p@$MARKETPLACE" <<<"$installed"; then
+      claude plugin uninstall "$p@$MARKETPLACE" || true
+    fi
+  done
   [[ -z "$ONLY" ]] && claude plugin marketplace remove "$MARKETPLACE" || true
   echo "Removed. Restart Claude Code to unload the plugins."
   exit 0
