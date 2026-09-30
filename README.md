@@ -109,7 +109,7 @@ Grok Build loads the same plugin folders. Add the marketplace and install a plug
 
 ```bash
 grok plugin marketplace add HermeticOrmus/LibreUIUX-Claude-Code
-grok plugin install design-mastery@libreuiux
+grok plugin install design-mastery@LibreUIUX-Claude-Code
 ```
 
 Or install one plugin straight from its folder, with no marketplace:

@@ -31,7 +31,7 @@ The plugins install in Grok Build too (the Claude Code install is in the [README
 
 ```bash
 grok plugin marketplace add HermeticOrmus/LibreUIUX-Claude-Code
-grok plugin install design-mastery@libreuiux
+grok plugin install design-mastery@LibreUIUX-Claude-Code
 ```
 
 Or install one plugin straight from its folder: `grok plugin install HermeticOrmus/LibreUIUX-Claude-Code#plugins/design-mastery`. From a clone, `./setup.sh --grok` installs all 71 through the `grok` CLI. The `libreuiux-hooks` plugin uses a hook format Grok Build supports, but it has not been verified in a live Grok session yet.
