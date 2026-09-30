@@ -1,0 +1,19 @@
+{
+  "name": "comprehensive-review",
+  "version": "1.2.1",
+  "description": "Multi-perspective code analysis covering architecture, security, and best practices",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "code-review",
+    "quality",
+    "architecture",
+    "security",
+    "best-practices"
+  ]
+}

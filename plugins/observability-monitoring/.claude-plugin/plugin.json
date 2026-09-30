@@ -1,0 +1,22 @@
+{
+  "name": "observability-monitoring",
+  "version": "1.2.1",
+  "description": "Metrics collection, logging infrastructure, distributed tracing, SLO implementation, and monitoring dashboards",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "observability",
+    "monitoring",
+    "metrics",
+    "logging",
+    "tracing",
+    "slo",
+    "prometheus",
+    "grafana"
+  ]
+}

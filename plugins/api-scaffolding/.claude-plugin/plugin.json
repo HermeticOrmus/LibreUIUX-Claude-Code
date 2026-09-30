@@ -1,0 +1,20 @@
+{
+  "name": "api-scaffolding",
+  "version": "1.2.1",
+  "description": "REST and GraphQL API scaffolding, framework selection, backend architecture, and API generation",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "rest",
+    "graphql",
+    "fastapi",
+    "django",
+    "express"
+  ]
+}

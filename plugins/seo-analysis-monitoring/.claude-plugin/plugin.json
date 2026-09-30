@@ -1,0 +1,19 @@
+{
+  "name": "seo-analysis-monitoring",
+  "version": "1.2.0",
+  "description": "Content freshness analysis, cannibalization detection, and authority building for SEO",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "content-analysis",
+    "e-e-a-t",
+    "authority",
+    "monitoring"
+  ]
+}

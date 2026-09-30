@@ -1,0 +1,19 @@
+{
+  "name": "web-scripting",
+  "version": "1.2.0",
+  "description": "Web scripting with PHP and Ruby for web applications, CMS development, and backend services",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "ruby",
+    "rails",
+    "wordpress",
+    "web-scripting"
+  ]
+}

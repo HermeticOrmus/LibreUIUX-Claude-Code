@@ -1,0 +1,20 @@
+{
+  "name": "mcp-integrations",
+  "version": "1.0.0",
+  "description": "Browser DevTools through MCP for live UI inspection, screenshot-to-code, design token extraction, and visual debugging of running interfaces.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "chrome-devtools",
+    "browser-automation",
+    "screenshot-to-code",
+    "visual-debugging",
+    "design-tokens"
+  ]
+}

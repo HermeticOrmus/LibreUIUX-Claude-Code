@@ -1,0 +1,20 @@
+{
+  "name": "llm-application-dev",
+  "version": "1.2.1",
+  "description": "LLM application development, prompt engineering, and AI assistant optimization",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "llm",
+    "ai",
+    "prompt-engineering",
+    "langchain",
+    "gpt",
+    "claude"
+  ]
+}

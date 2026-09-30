@@ -1,0 +1,21 @@
+{
+  "name": "archetypal-alchemy",
+  "version": "1.0.0",
+  "description": "Jungian archetypes and Major Arcana symbolism turned into UI structure and color systems, with commands that generate archetype-driven components and Tailwind palettes.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "archetypes",
+    "jung",
+    "tarot",
+    "color-palettes",
+    "design-systems",
+    "tailwind",
+    "ui-ux"
+  ]
+}

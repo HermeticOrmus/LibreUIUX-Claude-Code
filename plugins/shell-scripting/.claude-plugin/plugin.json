@@ -1,0 +1,21 @@
+{
+  "name": "shell-scripting",
+  "version": "1.2.1",
+  "description": "Production-grade Bash scripting with defensive programming, POSIX compliance, and comprehensive testing",
+  "author": {
+    "name": "Ryan Snodgrass",
+    "url": "https://github.com/rsnodgrass"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "bash",
+    "shell",
+    "scripting",
+    "automation",
+    "posix",
+    "shellcheck",
+    "testing"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "kubernetes-operations",
+  "version": "1.2.1",
+  "description": "Kubernetes manifest generation, networking configuration, security policies, observability setup, GitOps workflows, and auto-scaling",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "kubernetes",
+    "k8s",
+    "containers",
+    "helm",
+    "argocd",
+    "gitops"
+  ]
+}

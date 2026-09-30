@@ -1,0 +1,21 @@
+{
+  "name": "hr-legal-compliance",
+  "version": "1.2.0",
+  "description": "HR policy documentation, legal compliance templates (GDPR/SOC2/HIPAA), employment contracts, and regulatory documentation",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "hr",
+    "legal",
+    "compliance",
+    "gdpr",
+    "soc2",
+    "hipaa",
+    "policies"
+  ]
+}

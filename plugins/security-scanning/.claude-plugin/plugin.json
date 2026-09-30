@@ -1,0 +1,19 @@
+{
+  "name": "security-scanning",
+  "version": "1.2.2",
+  "description": "SAST analysis, dependency vulnerability scanning, OWASP Top 10 compliance, container security scanning, and automated security hardening",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "sast",
+    "vulnerability-scanning",
+    "owasp",
+    "devsecops"
+  ]
+}

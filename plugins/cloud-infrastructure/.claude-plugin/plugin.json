@@ -1,0 +1,21 @@
+{
+  "name": "cloud-infrastructure",
+  "version": "1.2.1",
+  "description": "Cloud architecture design for AWS/Azure/GCP, Kubernetes cluster configuration, Terraform infrastructure-as-code, hybrid cloud networking, and multi-cloud cost optimization",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "cloud",
+    "aws",
+    "azure",
+    "gcp",
+    "kubernetes",
+    "terraform",
+    "infrastructure"
+  ]
+}

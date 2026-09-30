@@ -1,0 +1,19 @@
+{
+  "name": "cicd-automation",
+  "version": "1.2.1",
+  "description": "CI/CD pipeline configuration, GitHub Actions/GitLab CI workflow setup, and automated deployment pipeline orchestration",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "ci-cd",
+    "automation",
+    "pipeline",
+    "github-actions",
+    "gitlab-ci"
+  ]
+}

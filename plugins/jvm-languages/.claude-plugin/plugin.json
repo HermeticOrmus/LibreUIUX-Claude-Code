@@ -1,0 +1,20 @@
+{
+  "name": "jvm-languages",
+  "version": "1.2.0",
+  "description": "JVM language development including Java, Scala, and C# with enterprise patterns and frameworks",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "java",
+    "scala",
+    "csharp",
+    "jvm",
+    "enterprise",
+    "dotnet"
+  ]
+}

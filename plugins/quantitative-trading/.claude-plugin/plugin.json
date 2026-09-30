@@ -1,0 +1,19 @@
+{
+  "name": "quantitative-trading",
+  "version": "1.2.0",
+  "description": "Quantitative analysis, algorithmic trading strategies, financial modeling, portfolio risk management, and backtesting",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "fintech",
+    "quant",
+    "trading",
+    "algorithmic-trading",
+    "risk-management"
+  ]
+}

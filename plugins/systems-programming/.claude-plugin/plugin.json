@@ -1,0 +1,20 @@
+{
+  "name": "systems-programming",
+  "version": "1.2.0",
+  "description": "Systems programming with Rust, Go, C, and C++ for performance-critical and low-level development",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "rust",
+    "golang",
+    "c",
+    "cpp",
+    "systems-programming",
+    "performance"
+  ]
+}
