@@ -1,3 +1,8 @@
+---
+description: Plan, build, review, and refine a premium SaaS landing page one section at a time
+argument-hint: "[define|setup|build|review|refine] [section]"
+---
+
 # Premium Landing Page Generator
 
 Generate premium $5k+ quality SaaS landing pages using the Define → Build → Review → Refine framework.

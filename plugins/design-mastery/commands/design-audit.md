@@ -1,6 +1,7 @@
 ---
 name: design-audit
-description: Systematic evaluation of existing designs against fundamental principles. Provides actionable feedback rooted in design theory and best practices.
+description: Audit a UI against eight design dimensions and return scored findings with fixes
+argument-hint: "[screenshot path, URL, code, or description]"
 ---
 
 # Design Audit Command
@@ -85,7 +86,7 @@ Check:
 Check:
 - [ ] Color contrast - 4.5:1 for text, 3:1 for large text
 - [ ] Focus indicators - keyboard navigation visible
-- [ ] Touch targets - 44x44px minimum
+- [ ] Touch targets - at least 24x24px (WCAG 2.2 AA), 44x44px recommended (AAA, Apple HIG)
 - [ ] Alt text - images have descriptions
 - [ ] Motion consideration - reduced motion options
 

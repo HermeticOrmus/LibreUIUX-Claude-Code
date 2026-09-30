@@ -1,6 +1,7 @@
 ---
 name: style-guide
-description: Generate comprehensive design system documentation including colors, typography, spacing, components, and usage guidelines. Outputs production-ready Tailwind/CSS configuration.
+description: Generate a style guide with design tokens, type scale, spacing, components, and Tailwind or CSS config
+argument-hint: "[brand, product, or scope]"
 ---
 
 # Style Guide Generator

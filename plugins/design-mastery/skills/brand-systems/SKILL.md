@@ -1,6 +1,6 @@
 ---
 name: brand-systems
-description: Building comprehensive brand identity systems from strategy to implementation. Covers logo design, color palettes, typography pairing, voice guidelines, and system documentation. Use when creating new brands, rebranding, or systematizing existing identities.
+description: "Brand identity building blocks: positioning, personality, archetypes, logo systems, color palettes, type pairing, voice, and guidelines documentation. Use when creating a brand, rebranding, or turning an existing identity into tokens and rules others can follow."
 ---
 
 # Brand Systems
@@ -118,7 +118,7 @@ Primary:
   Tailwind: blue-600
 
   Usage: CTAs, links, primary actions
-  Accessible on: white (4.5:1), gray-50 (4.2:1)
+  Accessible on: white (5.17:1), gray-50 (4.95:1)
 ```
 
 **Extended Palette**:
@@ -367,6 +367,8 @@ Style: [Visual approach in 2-3 words]
 ---
 
 ## Resources
+
+Read the matching file when a brand task needs more depth than the summary above.
 
 - **assets/brand-canvas-template.md**: Fillable brand canvas
 - **references/logo-design.md**: Logo creation principles

@@ -184,7 +184,7 @@ Body:    font-sans text-base leading-relaxed
 **Core Lesson**: Constraints liberate creativity
 
 **Apply His Wisdom**:
-- Limited typefaces (he used 5 total) - restraint breeds excellence
+- A few basic typefaces (his exhibition "A Few Basic Typefaces" used only four) - restraint breeds excellence
 - Strict grids create freedom within structure
 - Clarity over geographic accuracy (prioritize communication)
 
@@ -196,6 +196,8 @@ Body:    font-sans text-base leading-relaxed
 --font-mono: 'Courier';
 /* That's it. No more fonts. */
 ```
+
+**Full profile**: [`skills/design-masters/references/massimo-vignelli.md`](skills/design-masters/references/massimo-vignelli.md)
 
 ---
 
@@ -226,6 +228,8 @@ Body:    font-sans text-base leading-relaxed
 </button>
 ```
 
+**Full profile**: [`skills/design-masters/references/dieter-rams.md`](skills/design-masters/references/dieter-rams.md)
+
 ---
 
 ### Paula Scher (1948-)
@@ -247,12 +251,14 @@ Body:    font-sans text-base leading-relaxed
 </h1>
 ```
 
+**Full profile**: [`skills/design-masters/references/paula-scher.md`](skills/design-masters/references/paula-scher.md)
+
 ---
 
 ### Josef Müller-Brockmann (1914-1996)
 > "The grid system is an aid, not a guarantee."
 
-**Legacy**: Father of Swiss International Style, mathematical precision
+**Legacy**: A leading figure of the Swiss International Style, mathematical precision
 **Core Lesson**: Grids create order, but knowing when to break them creates art
 
 **Apply His Wisdom**:
@@ -271,7 +277,11 @@ Body:    font-sans text-base leading-relaxed
 </div>
 ```
 
+**Full profile**: [`skills/design-masters/references/josef-muller-brockmann.md`](skills/design-masters/references/josef-muller-brockmann.md)
+
 ---
+
+More masters (David Carson, Paul Rand) and every movement, principle, and brand topic have their own reference files in `skills/*/references/`; the skills load them when a task needs depth.
 
 ## The 5 Design Movements
 
@@ -359,35 +369,40 @@ Body:    font-sans text-base leading-relaxed
 ```
 design-mastery/
 ├── README.md                          # This file
+├── .claude-plugin/plugin.json
 │
 ├── skills/                            # Knowledge base
 │   ├── design-principles/
 │   │   ├── SKILL.md                   # 5 toolkits
 │   │   ├── assets/
 │   │   │   └── principles-checklist.md
-│   │   └── references/
-│   │       ├── color-theory.md
-│   │       └── typography-fundamentals.md
+│   │   └── references/                # gestalt, hierarchy, composition, color, typography
 │   ├── design-masters/
-│   │   ├── SKILL.md                   # 5 legendary designers
-│   │   └── references/
-│   │       └── saul-bass.md
+│   │   ├── SKILL.md                   # legendary designers
+│   │   └── references/                # Bass, Vignelli, Rams, Scher, Müller-Brockmann, Carson, Rand
 │   ├── design-movements/
-│   │   └── SKILL.md                   # 5 historic movements
-│   └── brand-systems/
-│       ├── SKILL.md                   # Brand strategy & systems
-│       └── assets/
-│           └── brand-canvas-template.md
+│   │   ├── SKILL.md                   # historic movements
+│   │   └── references/                # one file per movement, Arts and Crafts to flat design
+│   ├── brand-systems/
+│   │   ├── SKILL.md                   # Brand strategy & systems
+│   │   ├── assets/
+│   │   │   └── brand-canvas-template.md
+│   │   └── references/                # logo, palettes, type pairing, voice
+│   └── premium-saas-design/
+│       └── SKILL.md                   # Define, Build, Review, Refine loop
 │
 ├── commands/                          # Slash commands
 │   ├── style-guide.md                 # Generate style guides
 │   ├── design-audit.md                # Audit existing designs
-│   └── brand-identity.md              # Create brand systems
+│   ├── brand-identity.md              # Create brand systems
+│   └── premium-landing.md             # Premium SaaS landing pages
 │
-└── agents/                            # Specialist agents
-    ├── design-master.md               # Timeless principles expert
-    ├── visual-historian.md            # Movement & history expert
-    └── brand-architect.md             # Brand strategy expert
+├── agents/                            # Specialist agents
+│   ├── design-master.md               # Timeless principles expert
+│   ├── visual-historian.md            # Movement & history expert
+│   └── brand-architect.md             # Brand strategy expert
+│
+└── evals/                             # cases for `claude plugin eval plugins/design-mastery`
 ```
 
 ---

@@ -46,3 +46,7 @@ coverage/
 .cache/
 .temp/
 .tmp/
+
+# Eval results (claude plugin eval)
+plugins/*/evals/results/
+evals/results/
