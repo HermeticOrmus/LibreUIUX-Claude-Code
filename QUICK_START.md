@@ -25,6 +25,17 @@ Or manually copy the template:
 - Go to `templates/CLAUDE.modern-webapp.md`
 - Copy contents to `CLAUDE.md` in your project root
 
+### Install in Grok Build
+
+The plugins install in Grok Build too (the Claude Code install is in the [README](README.md#install-from-claude-code)). From a terminal:
+
+```bash
+grok plugin marketplace add HermeticOrmus/LibreUIUX-Claude-Code
+grok plugin install design-mastery@libreuiux
+```
+
+Or install one plugin straight from its folder: `grok plugin install HermeticOrmus/LibreUIUX-Claude-Code#plugins/design-mastery`. From a clone, `./setup.sh --grok` installs all 71 through the `grok` CLI. The `libreuiux-hooks` plugin uses a hook format Grok Build supports, but it has not been verified in a live Grok session yet.
+
 ---
 
 ## Step 2: Start Claude Code (10 seconds)
