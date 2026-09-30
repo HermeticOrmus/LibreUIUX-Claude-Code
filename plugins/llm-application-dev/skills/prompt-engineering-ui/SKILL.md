@@ -1,6 +1,6 @@
 ---
 name: prompt-engineering-ui
-description: Prompt patterns for consistent UI generation. Covers precise design intent communication, component specification formats, and iterative refinement patterns for LLM-driven UI development.
+description: "Prompt patterns for consistent UI generation: stating design intent precisely, component specification formats, few-shot examples, and structured refinement loops. Use when UI output from an LLM is inconsistent or generic, or when building reusable prompt templates for a design system."
 ---
 
 # Prompt Engineering for UI Generation

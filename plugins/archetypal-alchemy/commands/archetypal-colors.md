@@ -1,6 +1,7 @@
 ---
 name: archetypal-colors
-description: Generate complete color palettes and Tailwind configs from Major Arcana cards. Transform symbolic Tarot energy into actionable design tokens.
+description: Generate a color palette and Tailwind config from a Major Arcana card
+argument-hint: "[Major Arcana card], e.g. Sun"
 ---
 
 # Archetypal Color Palette Generation

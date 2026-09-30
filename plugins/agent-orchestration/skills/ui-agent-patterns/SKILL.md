@@ -1,6 +1,6 @@
 ---
 name: ui-agent-patterns
-description: Patterns for delegating UI work to specialized agents. Covers synthesis-master vs specialized agents, multi-agent UI generation workflows, and orchestration strategies for complex UI tasks.
+description: "Patterns for delegating UI work to agents: one synthesis agent versus specialized agents, multi-agent pipelines for research, design, implementation, and review, and clean handoffs between them. Use when a UI task is too large for one pass or you are designing an agent workflow for components or design systems."
 ---
 
 # UI Agent Patterns

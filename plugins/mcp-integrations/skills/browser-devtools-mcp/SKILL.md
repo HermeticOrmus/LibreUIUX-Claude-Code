@@ -1,6 +1,6 @@
 ---
 name: browser-devtools-mcp
-description: Integrating Chrome DevTools and browser automation via MCP for live UI inspection, screenshot-to-code workflows, and visual debugging. Bridges the gap between design and implementation.
+description: "Chrome DevTools and browser automation through MCP for live UI work: screenshots, DOM and computed-style inspection, screenshot-to-code, design token extraction, Lighthouse and accessibility audits, and visual regression checks. Use when Claude should look at a running interface instead of guessing from code."
 ---
 
 # Browser DevTools MCP Integration
