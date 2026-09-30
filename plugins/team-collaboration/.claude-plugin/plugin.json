@@ -1,0 +1,18 @@
+{
+  "name": "team-collaboration",
+  "version": "1.2.0",
+  "description": "Team workflows, issue management, standup automation, and developer experience optimization",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "collaboration",
+    "team",
+    "standup",
+    "issue-management"
+  ]
+}

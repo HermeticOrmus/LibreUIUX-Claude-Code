@@ -1,0 +1,19 @@
+{
+  "name": "backend-api-security",
+  "version": "1.2.0",
+  "description": "API security hardening, authentication implementation, authorization patterns, rate limiting, and input validation",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "api-security",
+    "authentication",
+    "authorization",
+    "jwt",
+    "oauth"
+  ]
+}

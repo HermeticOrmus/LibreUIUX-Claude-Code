@@ -1,0 +1,32 @@
+{
+  "name": "design-mastery",
+  "version": "1.1.0",
+  "description": "Design principles, legendary designers, and historical movements applied to UI work, with agents and workflows for brand identity, design audits, style guides, and premium landing pages.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "ui-ux",
+    "brand-identity",
+    "design-systems",
+    "typography",
+    "color-theory",
+    "visual-design",
+    "design-principles",
+    "saul-bass",
+    "massimo-vignelli",
+    "dieter-rams",
+    "bauhaus",
+    "swiss-design",
+    "gestalt",
+    "paula-scher",
+    "paul-rand",
+    "design-audit",
+    "landing-page"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "customer-sales-automation",
+  "version": "1.2.0",
+  "description": "Customer support workflow automation, sales pipeline management, email campaigns, and CRM integration",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "customer-support",
+    "sales",
+    "crm",
+    "email-campaigns",
+    "automation"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "content-marketing",
+  "version": "1.2.0",
+  "description": "Content marketing strategy, web research, and information synthesis for marketing operations",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "content-marketing",
+    "research",
+    "marketing-strategy",
+    "social-media"
+  ]
+}

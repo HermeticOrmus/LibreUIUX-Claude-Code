@@ -1,0 +1,19 @@
+{
+  "name": "vibe-coding",
+  "version": "1.0.0",
+  "description": "Rapid, disposable UI prototyping: when to explore fast and when to refine, variant exploration, and how to carry a validated prototype toward production.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "prototyping",
+    "vibe-coding",
+    "ui-exploration",
+    "rapid-iteration",
+    "ai-assisted-development"
+  ]
+}

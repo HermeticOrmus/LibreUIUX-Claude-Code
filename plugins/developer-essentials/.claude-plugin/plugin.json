@@ -1,0 +1,22 @@
+{
+  "name": "developer-essentials",
+  "version": "1.0.0",
+  "description": "Essential developer skills including Git workflows, SQL optimization, error handling, code review, E2E testing, authentication, debugging, and monorepo management",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "sql",
+    "debugging",
+    "testing",
+    "authentication",
+    "code-review",
+    "monorepo",
+    "essential"
+  ]
+}

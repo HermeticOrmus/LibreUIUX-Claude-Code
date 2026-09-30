@@ -1,0 +1,20 @@
+{
+  "name": "multi-platform-apps",
+  "version": "1.2.1",
+  "description": "Cross-platform application development coordinating web, iOS, Android, and desktop implementations",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "cross-platform",
+    "mobile",
+    "web",
+    "desktop",
+    "react-native",
+    "flutter"
+  ]
+}

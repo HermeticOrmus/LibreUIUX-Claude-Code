@@ -1,0 +1,19 @@
+{
+  "name": "database-migrations",
+  "version": "1.2.0",
+  "description": "Database migration automation, observability, and cross-database migration strategies",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "migrations",
+    "database-operations",
+    "postgres",
+    "mysql",
+    "mongodb"
+  ]
+}

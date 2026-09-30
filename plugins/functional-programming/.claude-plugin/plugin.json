@@ -1,0 +1,19 @@
+{
+  "name": "functional-programming",
+  "version": "1.2.0",
+  "description": "Functional programming with Elixir, OTP patterns, Phoenix framework, and distributed systems",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "elixir",
+    "functional",
+    "phoenix",
+    "otp",
+    "distributed"
+  ]
+}

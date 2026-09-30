@@ -1,0 +1,18 @@
+{
+  "name": "deployment-validation",
+  "version": "1.2.0",
+  "description": "Pre-deployment checks, configuration validation, and deployment readiness assessment",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "validation",
+    "pre-flight",
+    "configuration",
+    "deployment-safety"
+  ]
+}

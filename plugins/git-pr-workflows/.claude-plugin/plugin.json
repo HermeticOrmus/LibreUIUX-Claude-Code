@@ -1,0 +1,19 @@
+{
+  "name": "git-pr-workflows",
+  "version": "1.2.1",
+  "description": "Git workflow automation, pull request enhancement, and team onboarding processes",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "pull-request",
+    "workflow",
+    "onboarding",
+    "essential"
+  ]
+}

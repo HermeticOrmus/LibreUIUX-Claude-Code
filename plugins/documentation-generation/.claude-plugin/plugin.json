@@ -1,0 +1,20 @@
+{
+  "name": "documentation-generation",
+  "version": "1.2.0",
+  "description": "OpenAPI specification generation, Mermaid diagram creation, tutorial writing, API reference documentation",
+  "author": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  },
+  "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "api-docs",
+    "diagrams",
+    "openapi",
+    "swagger",
+    "mermaid"
+  ]
+}
