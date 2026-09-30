@@ -37,7 +37,7 @@ Star counts are `stargazers_count` from the GitHub REST API, read on 2026-09-30.
 | Chrome DevTools MCP (ChromeDevTools/chrome-devtools-mcp, 52,810 stars) | MCP server that lets a coding agent control and inspect a live Chrome: screenshots, console, network, performance traces | mcp-integrations `browser-devtools-mcp` skill; the README's "Set up Chrome DevTools MCP" step | The tool our advanced path names; our setup folder for it does not exist yet | https://github.com/ChromeDevTools/chrome-devtools-mcp |
 | 21st MCP (21st-dev/magic-mcp, 5,953 stars) | MCP server to search 10,000+ React and Tailwind components and generate UI from Cursor, Claude Code, Windsurf, VS Code or Codex | `resources/component-libraries.md` | Needs a 21st.dev API key; AI generation only when the account has AI access | https://github.com/21st-dev/magic-mcp |
 | awesome-cursorrules (PatrickJS/awesome-cursorrules, 40,862 stars) | Community collection of Cursor rule files, including React, Next.js, Tailwind and shadcn/ui rule sets | `templates/CLAUDE.*.md` | Cursor-native `.mdc` format | https://github.com/PatrickJS/awesome-cursorrules |
-| v0 by Vercel | Hosted app builder: "an AI agent that helps anyone create real code and full-stack apps and agents"; clones pages from screenshots or Figma files | beginner prompts, vibe-coding | Standalone product with visual preview, outside the editor | https://v0.app |
+| v0 by Vercel | Hosted app builder: "an AI agent that helps anyone create real code and full-stack apps and agents"; clones pages from screenshots or Figma files | beginner prompts, vibe-coding | Standalone hosted product, outside the editor; the homepage says it can "create live prototypes, all with a prompt" | https://v0.app |
 
 ## Capabilities matrix
 
