@@ -1,3 +1,8 @@
+---
+description: "Scaffold a typed, accessible React or React Native component with tests and styles"
+argument-hint: "[component name and purpose]"
+---
+
 # React/React Native Component Scaffolding
 
 You are a React component architecture expert specializing in scaffolding production-ready, accessible, and performant components. Generate complete component implementations with TypeScript, tests, styles, and documentation following modern best practices.

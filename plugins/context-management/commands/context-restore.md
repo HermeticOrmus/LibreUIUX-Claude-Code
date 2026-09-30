@@ -1,3 +1,7 @@
+---
+description: "Restore saved project context for a multi-agent or long-running session"
+---
+
 # Context Restoration: Advanced Semantic Memory Rehydration
 
 ## Role Statement

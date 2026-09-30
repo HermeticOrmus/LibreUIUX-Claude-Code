@@ -1,3 +1,8 @@
+---
+description: "Modernize a legacy system step by step with the strangler fig pattern"
+argument-hint: "[legacy system or component]"
+---
+
 # Legacy Code Modernization Workflow
 
 Orchestrate a comprehensive legacy system modernization using the strangler fig pattern, enabling gradual replacement of outdated components while maintaining continuous business operations through expert agent coordination.

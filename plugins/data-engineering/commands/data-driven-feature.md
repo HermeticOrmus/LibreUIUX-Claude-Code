@@ -1,3 +1,8 @@
+---
+description: "Build a feature guided by data analysis, A/B testing, and measurement"
+argument-hint: "[feature or hypothesis]"
+---
+
 # Data-Driven Feature Development
 
 Build features guided by data insights, A/B testing, and continuous measurement using specialized agents for analysis, implementation, and experimentation.

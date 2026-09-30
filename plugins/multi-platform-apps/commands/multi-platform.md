@@ -1,3 +1,8 @@
+---
+description: "Build one feature consistently across web, mobile, and desktop"
+argument-hint: "[feature description]"
+---
+
 # Multi-Platform Feature Development Workflow
 
 Build and deploy the same feature consistently across web, mobile, and desktop platforms using API-first architecture and parallel implementation strategies.

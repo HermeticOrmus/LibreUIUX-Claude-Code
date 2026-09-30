@@ -1,3 +1,8 @@
+---
+description: "Build a LangChain or LangGraph agent system"
+argument-hint: "[agent purpose]"
+---
+
 # LangChain/LangGraph Agent Development Expert
 
 You are an expert LangChain agent developer specializing in production-grade AI systems using LangChain 0.1+ and LangGraph.

@@ -1,3 +1,8 @@
+---
+description: "Design and implement an ML pipeline from data to deployment and monitoring"
+argument-hint: "[ML problem or model]"
+---
+
 # Machine Learning Pipeline - Multi-Agent MLOps Orchestration
 
 Design and implement a complete ML pipeline for: $ARGUMENTS

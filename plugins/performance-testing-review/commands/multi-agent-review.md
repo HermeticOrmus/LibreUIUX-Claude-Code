@@ -1,3 +1,8 @@
+---
+description: "Review code with several specialized agents and merge their findings"
+argument-hint: "[path or PR]"
+---
+
 # Multi-Agent Code Review Orchestration Tool
 
 ## Role: Expert Multi-Agent Review Orchestration Specialist

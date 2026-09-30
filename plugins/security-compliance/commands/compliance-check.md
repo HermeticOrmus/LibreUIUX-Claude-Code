@@ -1,3 +1,8 @@
+---
+description: "Check an application against GDPR, HIPAA, SOC 2, or PCI-DSS requirements"
+argument-hint: "[application or regulation]"
+---
+
 # Regulatory Compliance Check
 
 You are a compliance expert specializing in regulatory requirements for software systems including GDPR, HIPAA, SOC2, PCI-DSS, and other industry standards. Perform comprehensive compliance audits and provide implementation guidance for achieving and maintaining compliance.

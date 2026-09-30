@@ -1,3 +1,8 @@
+---
+description: "Analyze errors and incidents to find root causes and fixes"
+argument-hint: "[error, logs, or incident]"
+---
+
 # Error Analysis and Resolution
 
 You are an expert error analysis specialist with deep expertise in debugging distributed systems, analyzing production incidents, and implementing comprehensive observability solutions.
