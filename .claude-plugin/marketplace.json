@@ -1,13 +1,12 @@
 {
-  "name": "claude-code-workflows",
+  "name": "libreuiux",
   "owner": {
-    "name": "Hermetic Ormus",
-    "email": "hermeticormus@proton.me",
+    "name": "Diego Bodart",
     "url": "https://github.com/HermeticOrmus"
   },
   "metadata": {
-    "description": "Production-ready workflow orchestration with 64 focused plugins, 87 specialized agents, and 44 tools - optimized for granular installation and minimal token usage",
-    "version": "1.2.0"
+    "description": "LibreUIUX: 71 Claude Code plugins for UI/UX-centered development. 5 are original (design-mastery, archetypal-alchemy, mcp-integrations, vibe-coding, libreuiux-hooks) and 66 engineering plugins are derived from wshobson/agents (MIT, Seth Hobson).",
+    "version": "2.0.0"
   },
   "plugins": [
     {
@@ -28,17 +27,7 @@
         "technical-writing",
         "tutorials"
       ],
-      "category": "documentation",
-      "strict": false,
-      "commands": [
-        "./commands/doc-generate.md",
-        "./commands/code-explain.md"
-      ],
-      "agents": [
-        "./agents/docs-architect.md",
-        "./agents/tutorial-engineer.md",
-        "./agents/code-reviewer.md"
-      ]
+      "category": "documentation"
     },
     {
       "name": "debugging-toolkit",
@@ -58,15 +47,7 @@
         "troubleshooting",
         "essential"
       ],
-      "category": "development",
-      "strict": false,
-      "commands": [
-        "./commands/smart-debug.md"
-      ],
-      "agents": [
-        "./agents/debugger.md",
-        "./agents/dx-optimizer.md"
-      ]
+      "category": "development"
     },
     {
       "name": "git-pr-workflows",
@@ -87,16 +68,7 @@
         "onboarding",
         "essential"
       ],
-      "category": "workflows",
-      "strict": false,
-      "commands": [
-        "./commands/pr-enhance.md",
-        "./commands/onboard.md",
-        "./commands/git-workflow.md"
-      ],
-      "agents": [
-        "./agents/code-reviewer.md"
-      ]
+      "category": "workflows"
     },
     {
       "name": "backend-development",
@@ -120,24 +92,7 @@
         "workflow-orchestration",
         "distributed-systems"
       ],
-      "category": "development",
-      "strict": false,
-      "commands": [
-        "./commands/feature-development.md"
-      ],
-      "agents": [
-        "./agents/backend-architect.md",
-        "./agents/graphql-architect.md",
-        "./agents/tdd-orchestrator.md",
-        "./agents/temporal-python-pro.md"
-      ],
-      "skills": [
-        "./skills/api-design-principles",
-        "./skills/architecture-patterns",
-        "./skills/microservices-patterns",
-        "./skills/workflow-orchestration-patterns",
-        "./skills/temporal-python-testing"
-      ]
+      "category": "development"
     },
     {
       "name": "frontend-mobile-development",
@@ -158,15 +113,7 @@
         "ui",
         "cross-platform"
       ],
-      "category": "development",
-      "strict": false,
-      "commands": [
-        "./commands/component-scaffold.md"
-      ],
-      "agents": [
-        "./agents/frontend-developer.md",
-        "./agents/mobile-developer.md"
-      ]
+      "category": "development"
     },
     {
       "name": "full-stack-orchestration",
@@ -187,17 +134,7 @@
         "security",
         "testing"
       ],
-      "category": "workflows",
-      "strict": false,
-      "commands": [
-        "./commands/full-stack-feature.md"
-      ],
-      "agents": [
-        "./agents/test-automator.md",
-        "./agents/security-auditor.md",
-        "./agents/performance-engineer.md",
-        "./agents/deployment-engineer.md"
-      ]
+      "category": "workflows"
     },
     {
       "name": "unit-testing",
@@ -218,15 +155,7 @@
         "javascript",
         "automation"
       ],
-      "category": "testing",
-      "strict": false,
-      "commands": [
-        "./commands/test-generate.md"
-      ],
-      "agents": [
-        "./agents/test-automator.md",
-        "./agents/debugger.md"
-      ]
+      "category": "testing"
     },
     {
       "name": "tdd-workflows",
@@ -246,18 +175,7 @@
         "workflow",
         "red-green-refactor"
       ],
-      "category": "workflows",
-      "strict": false,
-      "commands": [
-        "./commands/tdd-cycle.md",
-        "./commands/tdd-red.md",
-        "./commands/tdd-green.md",
-        "./commands/tdd-refactor.md"
-      ],
-      "agents": [
-        "./agents/tdd-orchestrator.md",
-        "./agents/code-reviewer.md"
-      ]
+      "category": "workflows"
     },
     {
       "name": "code-review-ai",
@@ -277,14 +195,7 @@
         "ai-analysis",
         "quality"
       ],
-      "category": "quality",
-      "strict": false,
-      "commands": [
-        "./commands/ai-review.md"
-      ],
-      "agents": [
-        "./agents/architect-review.md"
-      ]
+      "category": "quality"
     },
     {
       "name": "code-refactoring",
@@ -304,17 +215,7 @@
         "technical-debt",
         "cleanup"
       ],
-      "category": "utilities",
-      "strict": false,
-      "commands": [
-        "./commands/refactor-clean.md",
-        "./commands/tech-debt.md",
-        "./commands/context-restore.md"
-      ],
-      "agents": [
-        "./agents/legacy-modernizer.md",
-        "./agents/code-reviewer.md"
-      ]
+      "category": "utilities"
     },
     {
       "name": "dependency-management",
@@ -335,14 +236,7 @@
         "auditing",
         "upgrades"
       ],
-      "category": "utilities",
-      "strict": false,
-      "commands": [
-        "./commands/deps-audit.md"
-      ],
-      "agents": [
-        "./agents/legacy-modernizer.md"
-      ]
+      "category": "utilities"
     },
     {
       "name": "error-debugging",
@@ -362,17 +256,7 @@
         "diagnostics",
         "troubleshooting"
       ],
-      "category": "utilities",
-      "strict": false,
-      "commands": [
-        "./commands/error-analysis.md",
-        "./commands/error-trace.md",
-        "./commands/multi-agent-review.md"
-      ],
-      "agents": [
-        "./agents/debugger.md",
-        "./agents/error-detective.md"
-      ]
+      "category": "utilities"
     },
     {
       "name": "team-collaboration",
@@ -392,15 +276,7 @@
         "standup",
         "issue-management"
       ],
-      "category": "utilities",
-      "strict": false,
-      "commands": [
-        "./commands/issue.md",
-        "./commands/standup-notes.md"
-      ],
-      "agents": [
-        "./agents/dx-optimizer.md"
-      ]
+      "category": "utilities"
     },
     {
       "name": "llm-application-dev",
@@ -422,23 +298,7 @@
         "gpt",
         "claude"
       ],
-      "category": "ai-ml",
-      "strict": false,
-      "commands": [
-        "./commands/langchain-agent.md",
-        "./commands/ai-assistant.md",
-        "./commands/prompt-optimize.md"
-      ],
-      "agents": [
-        "./agents/ai-engineer.md",
-        "./agents/prompt-engineer.md"
-      ],
-      "skills": [
-        "./skills/langchain-architecture",
-        "./skills/llm-evaluation",
-        "./skills/prompt-engineering-patterns",
-        "./skills/rag-implementation"
-      ]
+      "category": "ai-ml"
     },
     {
       "name": "agent-orchestration",
@@ -458,15 +318,7 @@
         "ai-agents",
         "optimization"
       ],
-      "category": "ai-ml",
-      "strict": false,
-      "commands": [
-        "./commands/multi-agent-optimize.md",
-        "./commands/improve-agent.md"
-      ],
-      "agents": [
-        "./agents/context-manager.md"
-      ]
+      "category": "ai-ml"
     },
     {
       "name": "context-management",
@@ -486,15 +338,7 @@
         "conversation",
         "memory"
       ],
-      "category": "ai-ml",
-      "strict": false,
-      "commands": [
-        "./commands/context-save.md",
-        "./commands/context-restore.md"
-      ],
-      "agents": [
-        "./agents/context-manager.md"
-      ]
+      "category": "ai-ml"
     },
     {
       "name": "machine-learning-ops",
@@ -516,19 +360,7 @@
         "pytorch",
         "mlflow"
       ],
-      "category": "ai-ml",
-      "strict": false,
-      "commands": [
-        "./commands/ml-pipeline.md"
-      ],
-      "agents": [
-        "./agents/data-scientist.md",
-        "./agents/ml-engineer.md",
-        "./agents/mlops-engineer.md"
-      ],
-      "skills": [
-        "./skills/ml-pipeline-workflow"
-      ]
+      "category": "ai-ml"
     },
     {
       "name": "data-engineering",
@@ -549,16 +381,7 @@
         "data-warehouse",
         "batch-processing"
       ],
-      "category": "data",
-      "strict": false,
-      "commands": [
-        "./commands/data-driven-feature.md",
-        "./commands/data-pipeline.md"
-      ],
-      "agents": [
-        "./agents/data-engineer.md",
-        "./agents/backend-architect.md"
-      ]
+      "category": "data"
     },
     {
       "name": "incident-response",
@@ -578,16 +401,7 @@
         "sre",
         "troubleshooting"
       ],
-      "category": "operations",
-      "strict": false,
-      "commands": [
-        "./commands/incident-response.md",
-        "./commands/smart-fix.md"
-      ],
-      "agents": [
-        "./agents/incident-responder.md",
-        "./agents/devops-troubleshooter.md"
-      ]
+      "category": "operations"
     },
     {
       "name": "error-diagnostics",
@@ -607,17 +421,7 @@
         "root-cause",
         "debugging"
       ],
-      "category": "operations",
-      "strict": false,
-      "commands": [
-        "./commands/error-trace.md",
-        "./commands/error-analysis.md",
-        "./commands/smart-debug.md"
-      ],
-      "agents": [
-        "./agents/debugger.md",
-        "./agents/error-detective.md"
-      ]
+      "category": "operations"
     },
     {
       "name": "distributed-debugging",
@@ -637,15 +441,7 @@
         "debugging",
         "observability"
       ],
-      "category": "operations",
-      "strict": false,
-      "commands": [
-        "./commands/debug-trace.md"
-      ],
-      "agents": [
-        "./agents/error-detective.md",
-        "./agents/devops-troubleshooter.md"
-      ]
+      "category": "operations"
     },
     {
       "name": "observability-monitoring",
@@ -669,24 +465,7 @@
         "prometheus",
         "grafana"
       ],
-      "category": "operations",
-      "strict": false,
-      "commands": [
-        "./commands/monitor-setup.md",
-        "./commands/slo-implement.md"
-      ],
-      "agents": [
-        "./agents/observability-engineer.md",
-        "./agents/performance-engineer.md",
-        "./agents/database-optimizer.md",
-        "./agents/network-engineer.md"
-      ],
-      "skills": [
-        "./skills/distributed-tracing",
-        "./skills/grafana-dashboards",
-        "./skills/prometheus-configuration",
-        "./skills/slo-implementation"
-      ]
+      "category": "operations"
     },
     {
       "name": "deployment-strategies",
@@ -707,13 +486,7 @@
         "canary",
         "blue-green"
       ],
-      "category": "infrastructure",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/deployment-engineer.md",
-        "./agents/terraform-specialist.md"
-      ]
+      "category": "infrastructure"
     },
     {
       "name": "deployment-validation",
@@ -733,14 +506,7 @@
         "configuration",
         "deployment-safety"
       ],
-      "category": "infrastructure",
-      "strict": false,
-      "commands": [
-        "./commands/config-validate.md"
-      ],
-      "agents": [
-        "./agents/cloud-architect.md"
-      ]
+      "category": "infrastructure"
     },
     {
       "name": "kubernetes-operations",
@@ -762,18 +528,7 @@
         "argocd",
         "gitops"
       ],
-      "category": "infrastructure",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/kubernetes-architect.md"
-      ],
-      "skills": [
-        "./skills/gitops-workflow",
-        "./skills/helm-chart-scaffolding",
-        "./skills/k8s-manifest-generator",
-        "./skills/k8s-security-policies"
-      ]
+      "category": "infrastructure"
     },
     {
       "name": "cloud-infrastructure",
@@ -796,23 +551,7 @@
         "terraform",
         "infrastructure"
       ],
-      "category": "infrastructure",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/cloud-architect.md",
-        "./agents/kubernetes-architect.md",
-        "./agents/hybrid-cloud-architect.md",
-        "./agents/terraform-specialist.md",
-        "./agents/network-engineer.md",
-        "./agents/deployment-engineer.md"
-      ],
-      "skills": [
-        "./skills/cost-optimization",
-        "./skills/hybrid-cloud-networking",
-        "./skills/multi-cloud-architecture",
-        "./skills/terraform-module-library"
-      ]
+      "category": "infrastructure"
     },
     {
       "name": "cicd-automation",
@@ -833,24 +572,7 @@
         "github-actions",
         "gitlab-ci"
       ],
-      "category": "infrastructure",
-      "strict": false,
-      "commands": [
-        "./commands/workflow-automate.md"
-      ],
-      "agents": [
-        "./agents/deployment-engineer.md",
-        "./agents/devops-troubleshooter.md",
-        "./agents/kubernetes-architect.md",
-        "./agents/cloud-architect.md",
-        "./agents/terraform-specialist.md"
-      ],
-      "skills": [
-        "./skills/deployment-pipeline-design",
-        "./skills/github-actions-templates",
-        "./skills/gitlab-ci-patterns",
-        "./skills/secrets-management"
-      ]
+      "category": "infrastructure"
     },
     {
       "name": "application-performance",
@@ -870,16 +592,7 @@
         "optimization",
         "core-web-vitals"
       ],
-      "category": "performance",
-      "strict": false,
-      "commands": [
-        "./commands/performance-optimization.md"
-      ],
-      "agents": [
-        "./agents/performance-engineer.md",
-        "./agents/frontend-developer.md",
-        "./agents/observability-engineer.md"
-      ]
+      "category": "performance"
     },
     {
       "name": "database-cloud-optimization",
@@ -899,17 +612,7 @@
         "query-tuning",
         "scalability"
       ],
-      "category": "performance",
-      "strict": false,
-      "commands": [
-        "./commands/cost-optimize.md"
-      ],
-      "agents": [
-        "./agents/database-optimizer.md",
-        "./agents/database-architect.md",
-        "./agents/backend-architect.md",
-        "./agents/cloud-architect.md"
-      ]
+      "category": "performance"
     },
     {
       "name": "comprehensive-review",
@@ -930,17 +633,7 @@
         "security",
         "best-practices"
       ],
-      "category": "quality",
-      "strict": false,
-      "commands": [
-        "./commands/full-review.md",
-        "./commands/pr-enhance.md"
-      ],
-      "agents": [
-        "./agents/code-reviewer.md",
-        "./agents/architect-review.md",
-        "./agents/security-auditor.md"
-      ]
+      "category": "quality"
     },
     {
       "name": "performance-testing-review",
@@ -959,16 +652,7 @@
         "test-coverage",
         "quality-analysis"
       ],
-      "category": "quality",
-      "strict": false,
-      "commands": [
-        "./commands/ai-review.md",
-        "./commands/multi-agent-review.md"
-      ],
-      "agents": [
-        "./agents/performance-engineer.md",
-        "./agents/test-automator.md"
-      ]
+      "category": "quality"
     },
     {
       "name": "framework-migration",
@@ -989,23 +673,7 @@
         "angular",
         "react"
       ],
-      "category": "modernization",
-      "strict": false,
-      "commands": [
-        "./commands/legacy-modernize.md",
-        "./commands/code-migrate.md",
-        "./commands/deps-upgrade.md"
-      ],
-      "agents": [
-        "./agents/legacy-modernizer.md",
-        "./agents/architect-review.md"
-      ],
-      "skills": [
-        "./skills/angular-migration",
-        "./skills/database-migration",
-        "./skills/dependency-upgrade",
-        "./skills/react-modernization"
-      ]
+      "category": "modernization"
     },
     {
       "name": "codebase-cleanup",
@@ -1025,17 +693,7 @@
         "refactoring",
         "dependencies"
       ],
-      "category": "modernization",
-      "strict": false,
-      "commands": [
-        "./commands/deps-audit.md",
-        "./commands/tech-debt.md",
-        "./commands/refactor-clean.md"
-      ],
-      "agents": [
-        "./agents/test-automator.md",
-        "./agents/code-reviewer.md"
-      ]
+      "category": "modernization"
     },
     {
       "name": "database-design",
@@ -1055,16 +713,7 @@
         "sql",
         "data-modeling"
       ],
-      "category": "database",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/database-architect.md",
-        "./agents/sql-pro.md"
-      ],
-      "skills": [
-        "./skills/postgresql"
-      ]
+      "category": "database"
     },
     {
       "name": "database-migrations",
@@ -1085,16 +734,7 @@
         "mysql",
         "mongodb"
       ],
-      "category": "database",
-      "strict": false,
-      "commands": [
-        "./commands/sql-migrations.md",
-        "./commands/migration-observability.md"
-      ],
-      "agents": [
-        "./agents/database-optimizer.md",
-        "./agents/database-admin.md"
-      ]
+      "category": "database"
     },
     {
       "name": "security-scanning",
@@ -1115,19 +755,7 @@
         "owasp",
         "devsecops"
       ],
-      "category": "security",
-      "strict": false,
-      "commands": [
-        "./commands/security-hardening.md",
-        "./commands/security-sast.md",
-        "./commands/security-dependencies.md"
-      ],
-      "agents": [
-        "./agents/security-auditor.md"
-      ],
-      "skills": [
-        "./skills/sast-configuration"
-      ]
+      "category": "security"
     },
     {
       "name": "security-compliance",
@@ -1149,14 +777,7 @@
         "secrets",
         "regulatory"
       ],
-      "category": "security",
-      "strict": false,
-      "commands": [
-        "./commands/compliance-check.md"
-      ],
-      "agents": [
-        "./agents/security-auditor.md"
-      ]
+      "category": "security"
     },
     {
       "name": "backend-api-security",
@@ -1177,13 +798,7 @@
         "jwt",
         "oauth"
       ],
-      "category": "security",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/backend-security-coder.md",
-        "./agents/backend-architect.md"
-      ]
+      "category": "security"
     },
     {
       "name": "frontend-mobile-security",
@@ -1204,16 +819,7 @@
         "csrf",
         "csp"
       ],
-      "category": "security",
-      "strict": false,
-      "commands": [
-        "./commands/xss-scan.md"
-      ],
-      "agents": [
-        "./agents/frontend-security-coder.md",
-        "./agents/mobile-security-coder.md",
-        "./agents/frontend-developer.md"
-      ]
+      "category": "security"
     },
     {
       "name": "data-validation-suite",
@@ -1234,12 +840,7 @@
         "pydantic",
         "jsonschema"
       ],
-      "category": "data",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/backend-security-coder.md"
-      ]
+      "category": "data"
     },
     {
       "name": "api-scaffolding",
@@ -1261,18 +862,7 @@
         "django",
         "express"
       ],
-      "category": "api",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/backend-architect.md",
-        "./agents/graphql-architect.md",
-        "./agents/fastapi-pro.md",
-        "./agents/django-pro.md"
-      ],
-      "skills": [
-        "./skills/fastapi-templates"
-      ]
+      "category": "api"
     },
     {
       "name": "api-testing-observability",
@@ -1293,14 +883,7 @@
         "swagger",
         "observability"
       ],
-      "category": "api",
-      "strict": false,
-      "commands": [
-        "./commands/api-mock.md"
-      ],
-      "agents": [
-        "./agents/api-documenter.md"
-      ]
+      "category": "api"
     },
     {
       "name": "seo-content-creation",
@@ -1320,14 +903,7 @@
         "content-planning",
         "content-audit"
       ],
-      "category": "marketing",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/seo-content-writer.md",
-        "./agents/seo-content-planner.md",
-        "./agents/seo-content-auditor.md"
-      ]
+      "category": "marketing"
     },
     {
       "name": "seo-technical-optimization",
@@ -1348,15 +924,7 @@
         "schema-markup",
         "snippets"
       ],
-      "category": "marketing",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/seo-meta-optimizer.md",
-        "./agents/seo-keyword-strategist.md",
-        "./agents/seo-structure-architect.md",
-        "./agents/seo-snippet-hunter.md"
-      ]
+      "category": "marketing"
     },
     {
       "name": "seo-analysis-monitoring",
@@ -1377,14 +945,7 @@
         "authority",
         "monitoring"
       ],
-      "category": "marketing",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/seo-content-refresher.md",
-        "./agents/seo-cannibalization-detector.md",
-        "./agents/seo-authority-builder.md"
-      ]
+      "category": "marketing"
     },
     {
       "name": "documentation-generation",
@@ -1406,18 +967,7 @@
         "swagger",
         "mermaid"
       ],
-      "category": "documentation",
-      "strict": false,
-      "commands": [
-        "./commands/doc-generate.md"
-      ],
-      "agents": [
-        "./agents/docs-architect.md",
-        "./agents/api-documenter.md",
-        "./agents/mermaid-expert.md",
-        "./agents/tutorial-engineer.md",
-        "./agents/reference-builder.md"
-      ]
+      "category": "documentation"
     },
     {
       "name": "multi-platform-apps",
@@ -1439,19 +989,7 @@
         "react-native",
         "flutter"
       ],
-      "category": "development",
-      "strict": false,
-      "commands": [
-        "./commands/multi-platform.md"
-      ],
-      "agents": [
-        "./agents/mobile-developer.md",
-        "./agents/flutter-expert.md",
-        "./agents/ios-developer.md",
-        "./agents/frontend-developer.md",
-        "./agents/backend-architect.md",
-        "./agents/ui-ux-designer.md"
-      ]
+      "category": "development"
     },
     {
       "name": "business-analytics",
@@ -1473,12 +1011,7 @@
         "reporting",
         "bi"
       ],
-      "category": "business",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/business-analyst.md"
-      ]
+      "category": "business"
     },
     {
       "name": "hr-legal-compliance",
@@ -1501,13 +1034,7 @@
         "hipaa",
         "policies"
       ],
-      "category": "business",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/hr-pro.md",
-        "./agents/legal-advisor.md"
-      ]
+      "category": "business"
     },
     {
       "name": "customer-sales-automation",
@@ -1528,13 +1055,7 @@
         "email-campaigns",
         "automation"
       ],
-      "category": "business",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/customer-support.md",
-        "./agents/sales-automator.md"
-      ]
+      "category": "business"
     },
     {
       "name": "content-marketing",
@@ -1554,13 +1075,7 @@
         "marketing-strategy",
         "social-media"
       ],
-      "category": "marketing",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/content-marketer.md",
-        "./agents/search-specialist.md"
-      ]
+      "category": "marketing"
     },
     {
       "name": "blockchain-web3",
@@ -1583,18 +1098,7 @@
         "nft",
         "smart-contracts"
       ],
-      "category": "blockchain",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/blockchain-developer.md"
-      ],
-      "skills": [
-        "./skills/defi-protocol-templates",
-        "./skills/nft-standards",
-        "./skills/solidity-security",
-        "./skills/web3-testing"
-      ]
+      "category": "blockchain"
     },
     {
       "name": "quantitative-trading",
@@ -1615,13 +1119,7 @@
         "algorithmic-trading",
         "risk-management"
       ],
-      "category": "finance",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/quant-analyst.md",
-        "./agents/risk-manager.md"
-      ]
+      "category": "finance"
     },
     {
       "name": "payment-processing",
@@ -1644,18 +1142,7 @@
         "subscriptions",
         "pci"
       ],
-      "category": "payments",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/payment-integration.md"
-      ],
-      "skills": [
-        "./skills/billing-automation",
-        "./skills/paypal-integration",
-        "./skills/pci-compliance",
-        "./skills/stripe-integration"
-      ]
+      "category": "payments"
     },
     {
       "name": "game-development",
@@ -1677,13 +1164,7 @@
         "bukkit",
         "spigot"
       ],
-      "category": "gaming",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/unity-developer.md",
-        "./agents/minecraft-bukkit-pro.md"
-      ]
+      "category": "gaming"
     },
     {
       "name": "accessibility-compliance",
@@ -1704,14 +1185,7 @@
         "compliance",
         "inclusive-design"
       ],
-      "category": "accessibility",
-      "strict": false,
-      "commands": [
-        "./commands/accessibility-audit.md"
-      ],
-      "agents": [
-        "./agents/ui-visual-validator.md"
-      ]
+      "category": "accessibility"
     },
     {
       "name": "python-development",
@@ -1732,23 +1206,7 @@
         "async",
         "backend"
       ],
-      "category": "languages",
-      "strict": false,
-      "commands": [
-        "./commands/python-scaffold.md"
-      ],
-      "agents": [
-        "./agents/python-pro.md",
-        "./agents/django-pro.md",
-        "./agents/fastapi-pro.md"
-      ],
-      "skills": [
-        "./skills/async-python-patterns",
-        "./skills/python-testing-patterns",
-        "./skills/python-packaging",
-        "./skills/python-performance-optimization",
-        "./skills/uv-package-manager"
-      ]
+      "category": "languages"
     },
     {
       "name": "javascript-typescript",
@@ -1769,21 +1227,7 @@
         "nodejs",
         "react"
       ],
-      "category": "languages",
-      "strict": false,
-      "commands": [
-        "./commands/typescript-scaffold.md"
-      ],
-      "agents": [
-        "./agents/javascript-pro.md",
-        "./agents/typescript-pro.md"
-      ],
-      "skills": [
-        "./skills/typescript-advanced-types",
-        "./skills/nodejs-backend-patterns",
-        "./skills/javascript-testing-patterns",
-        "./skills/modern-javascript-patterns"
-      ]
+      "category": "languages"
     },
     {
       "name": "systems-programming",
@@ -1805,17 +1249,7 @@
         "systems-programming",
         "performance"
       ],
-      "category": "languages",
-      "strict": false,
-      "commands": [
-        "./commands/rust-project.md"
-      ],
-      "agents": [
-        "./agents/rust-pro.md",
-        "./agents/golang-pro.md",
-        "./agents/c-pro.md",
-        "./agents/cpp-pro.md"
-      ]
+      "category": "languages"
     },
     {
       "name": "jvm-languages",
@@ -1837,14 +1271,7 @@
         "enterprise",
         "dotnet"
       ],
-      "category": "languages",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/java-pro.md",
-        "./agents/scala-pro.md",
-        "./agents/csharp-pro.md"
-      ]
+      "category": "languages"
     },
     {
       "name": "web-scripting",
@@ -1865,13 +1292,7 @@
         "wordpress",
         "web-scripting"
       ],
-      "category": "languages",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/php-pro.md",
-        "./agents/ruby-pro.md"
-      ]
+      "category": "languages"
     },
     {
       "name": "functional-programming",
@@ -1892,12 +1313,7 @@
         "otp",
         "distributed"
       ],
-      "category": "languages",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/elixir-pro.md"
-      ]
+      "category": "languages"
     },
     {
       "name": "julia-development",
@@ -1919,13 +1335,7 @@
         "data-science",
         "multiple-dispatch"
       ],
-      "category": "languages",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/julia-pro.md"
-      ],
-      "skills": []
+      "category": "languages"
     },
     {
       "name": "arm-cortex-microcontrollers",
@@ -1948,12 +1358,7 @@
         "teensy",
         "stm32"
       ],
-      "category": "languages",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/arm-cortex-expert.md"
-      ]
+      "category": "languages"
     },
     {
       "name": "shell-scripting",
@@ -1976,18 +1381,7 @@
         "shellcheck",
         "testing"
       ],
-      "category": "languages",
-      "strict": false,
-      "commands": [],
-      "agents": [
-        "./agents/bash-pro.md",
-        "./agents/posix-shell-pro.md"
-      ],
-      "skills": [
-        "./skills/bash-defensive-patterns/SKILL.md",
-        "./skills/shellcheck-configuration/SKILL.md",
-        "./skills/bats-testing-patterns/SKILL.md"
-      ]
+      "category": "languages"
     },
     {
       "name": "developer-essentials",
@@ -2011,28 +1405,15 @@
         "monorepo",
         "essential"
       ],
-      "category": "development",
-      "strict": false,
-      "commands": [],
-      "agents": [],
-      "skills": [
-        "./skills/git-advanced-workflows",
-        "./skills/sql-optimization-patterns",
-        "./skills/error-handling-patterns",
-        "./skills/code-review-excellence",
-        "./skills/e2e-testing-patterns",
-        "./skills/auth-implementation-patterns",
-        "./skills/debugging-strategies",
-        "./skills/monorepo-management"
-      ]
+      "category": "development"
     },
     {
       "name": "design-mastery",
       "source": "./plugins/design-mastery",
-      "description": "Comprehensive design knowledge from timeless principles to legendary masters. Features brand identity commands, design auditing, and deep expertise in visual hierarchy, typography, color theory, Gestalt psychology, and historical design movements. Draws from Saul Bass, Massimo Vignelli, Dieter Rams, Paula Scher, and other design legends.",
-      "version": "1.0.0",
+      "description": "Design principles, legendary designers, and historical movements applied to UI work, with agents and workflows for brand identity, design audits, style guides, and premium landing pages.",
+      "version": "1.1.0",
       "author": {
-        "name": "Hermetic Ormus",
+        "name": "Diego Bodart",
         "url": "https://github.com/HermeticOrmus"
       },
       "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
@@ -2048,28 +1429,104 @@
         "visual-design",
         "design-principles",
         "saul-bass",
+        "massimo-vignelli",
         "dieter-rams",
         "bauhaus",
-        "swiss-design"
+        "swiss-design",
+        "gestalt",
+        "paula-scher",
+        "paul-rand",
+        "design-audit",
+        "landing-page"
       ],
-      "category": "design",
-      "strict": false,
-      "commands": [
-        "./commands/brand-identity.md",
-        "./commands/design-audit.md",
-        "./commands/style-guide.md"
+      "category": "design"
+    },
+    {
+      "name": "archetypal-alchemy",
+      "source": "./plugins/archetypal-alchemy",
+      "description": "Jungian archetypes and Major Arcana symbolism turned into UI structure and color systems, with commands that generate archetype-driven components and Tailwind palettes.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Bodart",
+        "url": "https://github.com/HermeticOrmus"
+      },
+      "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "license": "MIT",
+      "keywords": [
+        "archetypes",
+        "jung",
+        "tarot",
+        "color-palettes",
+        "design-systems",
+        "tailwind",
+        "ui-ux"
       ],
-      "agents": [
-        "./agents/design-master.md",
-        "./agents/brand-architect.md",
-        "./agents/visual-historian.md"
+      "category": "design"
+    },
+    {
+      "name": "mcp-integrations",
+      "source": "./plugins/mcp-integrations",
+      "description": "Browser DevTools through MCP for live UI inspection, screenshot-to-code, design token extraction, and visual debugging of running interfaces.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Bodart",
+        "url": "https://github.com/HermeticOrmus"
+      },
+      "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "license": "MIT",
+      "keywords": [
+        "mcp",
+        "chrome-devtools",
+        "browser-automation",
+        "screenshot-to-code",
+        "visual-debugging",
+        "design-tokens"
       ],
-      "skills": [
-        "./skills/design-principles",
-        "./skills/design-masters",
-        "./skills/design-movements",
-        "./skills/brand-systems"
-      ]
+      "category": "design"
+    },
+    {
+      "name": "vibe-coding",
+      "source": "./plugins/vibe-coding",
+      "description": "Rapid, disposable UI prototyping: when to explore fast and when to refine, variant exploration, and how to carry a validated prototype toward production.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Bodart",
+        "url": "https://github.com/HermeticOrmus"
+      },
+      "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "license": "MIT",
+      "keywords": [
+        "prototyping",
+        "vibe-coding",
+        "ui-exploration",
+        "rapid-iteration",
+        "ai-assisted-development"
+      ],
+      "category": "design"
+    },
+    {
+      "name": "libreuiux-hooks",
+      "source": "./plugins/libreuiux-hooks",
+      "description": "Optional hooks for UI projects: one line of stack context at session start, a confirmation prompt before editing secrets files, and accessibility and design-system hints after UI file edits.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Diego Bodart",
+        "url": "https://github.com/HermeticOrmus"
+      },
+      "homepage": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "repository": "https://github.com/HermeticOrmus/LibreUIUX-Claude-Code",
+      "license": "MIT",
+      "keywords": [
+        "hooks",
+        "accessibility",
+        "design-systems",
+        "ui-ux",
+        "wcag"
+      ],
+      "category": "design"
     }
   ]
 }
