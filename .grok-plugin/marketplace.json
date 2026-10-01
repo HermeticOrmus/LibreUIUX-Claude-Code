@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "LibreUIUX: 71 Claude Code plugins for UI/UX-centered development. 5 are original (design-mastery, archetypal-alchemy, mcp-integrations, vibe-coding, libreuiux-hooks) and 66 engineering plugins are derived from wshobson/agents (MIT, Seth Hobson).",
-    "version": "2.0.0"
+    "version": "2.1.0"
   },
   "plugins": [
     {
