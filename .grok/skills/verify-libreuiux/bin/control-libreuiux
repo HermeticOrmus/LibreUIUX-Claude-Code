@@ -1,0 +1,282 @@
+#!/usr/bin/env bash
+# control-libreuiux: install the LibreUIUX-Claude-Code plugin pack the way a user does, in clean configs,
+# and keep the evidence. Part of the verify-libreuiux skill (see ../SKILL.md).
+#
+#   control-libreuiux doctor                        is this checkout worth driving? (JSON)
+#   control-libreuiux run [--only a,b] [--pr N [--expect SHA]]
+#                                                install with both CLIs, prove every plugin
+#                                                loaded, clean up the scratch; one JSON result
+#   control-libreuiux install [--claude|--grok] [--only a,b] [--pr N [--expect SHA]]
+#                                                a fresh run that keeps its clean configs
+#   control-libreuiux details <plugin>              component inventory in the latest run
+#   control-libreuiux setup [setup.sh options]      ./setup.sh inside the latest run's clean configs
+#   control-libreuiux check                         scripts/check.sh on the latest run's tree
+#   control-libreuiux cleanup                       remove every run's scratch; evidence stays
+#
+# Needs claude, grok, jq and git on PATH. Your own Claude Code config and Grok home are
+# never touched: every command runs with CLAUDE_CONFIG_DIR and GROK_HOME inside the run.
+# Runs live in VERIFY_LIBREUIUX_HOME (default ~/.local/share/verify-libreuiux):
+#   runs/<stamp>-<head8>/scratch/   clean configs and the PR clone (removed by cleanup)
+#   runs/<stamp>-<head8>/evidence/  one log per command, list JSON, details, result.json (kept)
+#   runs/latest                     the newest run
+set -euo pipefail
+
+ME="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO="$(cd "$ME/../../../.." && pwd)"
+STORE="${VERIFY_LIBREUIUX_HOME:-$HOME/.local/share/verify-libreuiux}"
+RUNS="$STORE/runs"
+RUN="" SRC=""
+
+die() { echo "control-libreuiux: $*" >&2; exit 1; }
+need() { local c; for c in "$@"; do command -v "$c" >/dev/null || die "$c is not on PATH"; done; }
+usage() { awk 'NR==1{next} /^#/{sub(/^# ?/,""); print; next} {exit}' "${BASH_SOURCE[0]}"; }
+
+# rec <name> <command...>: run a command in the run's clean configs and keep the command,
+# its output and its exit code in evidence/<name>.log.
+rec() {
+  local name="$1" rc=0; shift
+  local log="$RUN/evidence/$name.log"
+  { printf '$'; printf ' %q' "$@"; printf '\n'; } >"$log"
+  "$@" >>"$log" 2>&1 || rc=$?
+  echo "exit $rc" >>"$log"
+  echo "  $name: exit $rc" >&2
+  return "$rc"
+}
+
+use_run() {
+  RUN="$1"
+  SRC="$(jq -r .src "$RUN/run.json")"
+  export CLAUDE_CONFIG_DIR="$RUN/scratch/claude-config" GROK_HOME="$RUN/scratch/grok-home"
+}
+
+latest_run() {
+  [[ -L "$RUNS/latest" && -f "$RUNS/latest/run.json" ]] || die "no run yet: start one with install or run"
+  use_run "$(readlink -f "$RUNS/latest")"
+  [[ -d "$CLAUDE_CONFIG_DIR" ]] || die "the latest run's scratch is cleaned up: start a new run"
+}
+
+# new_run <pr> <expect>: a run folder with empty configs, on this checkout or a PR head.
+new_run() {
+  local pr="$1" expect="$2" stamp head src="$REPO" tag
+  stamp="$(date -u +%Y%m%dT%H%M%SZ)"
+  if [[ -n "$pr" ]]; then
+    [[ "$pr" =~ ^[0-9]+$ ]] || die "--pr needs a PR number"
+    local url name tmp
+    url="$(git -C "$REPO" remote get-url origin)"
+    name="$(basename "$url" .git)"
+    tmp="$RUNS/.new-$stamp"
+    mkdir -p "$tmp/scratch/src"
+    src="$tmp/scratch/src/$name"
+    echo "fetching PR #$pr into a scratch clone" >&2
+    git clone -q --shared "$REPO" "$src"
+    git -C "$src" fetch -q "$url" "refs/pull/$pr/head"
+    git -C "$src" checkout -q FETCH_HEAD
+    head="$(git -C "$src" rev-parse HEAD)"
+    if [[ -n "$expect" && "$head" != "$expect"* ]]; then
+      rm -rf "$tmp"
+      die "PR #$pr head is $head, not $expect"
+    fi
+    tag="pr$pr-${head:0:8}"
+    RUN="$RUNS/$stamp-$tag"
+    mv "$tmp" "$RUN"
+    src="$RUN/scratch/src/$name"
+  else
+    head="$(git -C "$REPO" rev-parse HEAD)"
+    RUN="$RUNS/$stamp-${head:0:8}"
+  fi
+  mkdir -p "$RUN/scratch/claude-config" "$RUN/scratch/grok-home" "$RUN/evidence"
+  local dirty=false
+  [[ -z "$(git -C "$src" status --porcelain)" ]] || dirty=true
+  jq -n --arg src "$src" --arg head "$head" --arg pr "$pr" --argjson dirty "$dirty" \
+    '{src: $src, head: $head, pr: $pr, dirty: $dirty}' >"$RUN/run.json"
+  ln -sfn "$RUN" "$RUNS/latest"
+  use_run "$RUN"
+  echo "run $RUN (head ${head:0:12}${pr:+, PR #$pr})" >&2
+}
+
+claude_mk() { jq -r .name "$SRC/.claude-plugin/marketplace.json"; }
+grok_manifest() { [[ -f "$SRC/.grok-plugin/marketplace.json" ]]; }
+
+# selected <only>: the plugin names to install, every plugin in the manifest by default.
+selected() {
+  local all p
+  all="$(jq -r '.plugins[].name' "$SRC/.claude-plugin/marketplace.json")"
+  if [[ -z "$1" ]]; then printf '%s\n' "$all"; return; fi
+  for p in ${1//,/ }; do
+    grep -qx -- "$p" <<<"$all" || die "$p is not a plugin in .claude-plugin/marketplace.json"
+    printf '%s\n' "$p"
+  done
+}
+
+install_claude() {
+  local only="$1" mk p rc=0
+  mk="$(claude_mk)"
+  rec claude-marketplace-add claude plugin marketplace add "$SRC" || return 1
+  for p in $(selected "$only"); do rec "claude-install-$p" claude plugin install "$p@$mk" || rc=1; done
+  claude plugin list --json >"$RUN/evidence/claude-list.json" 2>"$RUN/evidence/claude-list.err" || rc=1
+  return "$rc"
+}
+
+install_grok() {
+  local only="$1" mk p rc=0
+  if grok_manifest; then
+    # Grok registers a local folder as a marketplace under the folder's name.
+    mk="$(basename "$SRC")"
+    rec grok-marketplace-add grok plugin marketplace add "$SRC" || return 1
+    for p in $(selected "$only"); do rec "grok-install-$p" grok plugin install "$p@$mk" --trust || rc=1; done
+  else
+    # The repo root is the one plugin: Grok installs it straight from the folder.
+    rec grok-install grok plugin install "$SRC" --trust || rc=1
+  fi
+  grok plugin list --json >"$RUN/evidence/grok-list.json" 2>"$RUN/evidence/grok-list.err" || rc=1
+  return "$rc"
+}
+
+# summary <only> <claude?> <grok?>: what the clean configs hold against what was asked for.
+summary() {
+  local only="$1" want_c="$2" want_g="$3" mk expected expected_g
+  mk="$(claude_mk)"
+  expected="$(selected "$only" | jq -R . | jq -s .)"
+  if grok_manifest; then expected_g="$expected"; else expected_g="$(jq -r '.plugins[0].name' "$SRC/.claude-plugin/marketplace.json" | jq -R . | jq -s .)"; fi
+  local cl='[]' gl='[]'
+  [[ "$want_c" == 1 && -s "$RUN/evidence/claude-list.json" ]] && cl="$(cat "$RUN/evidence/claude-list.json")"
+  [[ "$want_g" == 1 && -s "$RUN/evidence/grok-list.json" ]] && gl="$(cat "$RUN/evidence/grok-list.json")"
+  jq -n --argjson run "$(cat "$RUN/run.json")" --arg dir "$RUN" --arg mk "$mk" \
+    --argjson want "$expected" --argjson want_g "$expected_g" \
+    --argjson cl "$cl" --argjson gl "$gl" --argjson c "$want_c" --argjson g "$want_g" '
+    ($cl | map(select(.id | endswith("@" + $mk)))) as $c_in
+    | ($c_in | map(select(.enabled)) | map(.id | sub("@.*$"; ""))) as $c_on
+    | ($c_in | map(select((.errors // []) | length > 0) | {id, errors})) as $c_err
+    | ($gl | map(select(.status == "installed")) | map(.name)) as $g_on
+    | {
+        head: $run.head, pr: $run.pr, dirty: $run.dirty, evidence: ($dir + "/evidence"),
+        claude: (if $c == 1 then {wanted: ($want | length), enabled: ($c_on | length),
+                 missing: ($want - $c_on), load_errors: $c_err} else null end),
+        grok: (if $g == 1 then {wanted: ($want_g | length), installed: ($g_on | length),
+               missing: ($want_g - $g_on)} else null end)
+      }
+    | .ok = ((.claude == null or ((.claude.missing | length) == 0 and (.claude.load_errors | length) == 0))
+             and (.grok == null or (.grok.missing | length) == 0))'
+}
+
+details_into_evidence() {
+  local p="$1"
+  claude plugin details "$p@$(claude_mk)" >"$RUN/evidence/details-claude-$p.txt" 2>&1 || true
+  if grok_manifest; then
+    grok plugin details "$p" >"$RUN/evidence/details-grok-$p.txt" 2>&1 || true
+  else
+    grok plugin details "$(jq -r '.plugins[0].name' "$SRC/.claude-plugin/marketplace.json")" >"$RUN/evidence/details-grok-$p.txt" 2>&1 || true
+  fi
+}
+
+parse_run_opts() {
+  ONLY="" PR="" EXPECT="" WANT_C=1 WANT_G=1
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --only) ONLY="${2:?--only needs a comma-separated list}"; shift 2 ;;
+      --pr) PR="${2:?--pr needs a PR number}"; shift 2 ;;
+      --expect) EXPECT="${2:?--expect needs a SHA}"; shift 2 ;;
+      --claude) WANT_C=1 WANT_G=0; shift ;;
+      --grok) WANT_C=0 WANT_G=1; shift ;;
+      *) die "unknown option: $1" ;;
+    esac
+  done
+}
+
+cmd_doctor() {
+  local cv="" gv="" jqok=false mk="" n=0 gn=null sync=false
+  command -v claude >/dev/null && cv="$(claude --version 2>/dev/null | head -1)"
+  command -v grok >/dev/null && gv="$(grok --version 2>/dev/null | head -1)"
+  command -v jq >/dev/null || die "jq is not on PATH"
+  jqok=true
+  mk="$(jq -r .name "$REPO/.claude-plugin/marketplace.json" 2>/dev/null || true)"
+  n="$(jq '.plugins | length' "$REPO/.claude-plugin/marketplace.json" 2>/dev/null || echo 0)"
+  [[ -f "$REPO/.grok-plugin/marketplace.json" ]] && gn="$(jq '.plugins | length' "$REPO/.grok-plugin/marketplace.json")"
+  (cd "$REPO" && python3 scripts/sync-grok-manifest.py --check >/dev/null 2>&1) && sync=true
+  jq -n --arg repo "$(basename "$REPO")" --arg head "$(git -C "$REPO" rev-parse HEAD)" \
+    --argjson dirty "$([[ -z "$(git -C "$REPO" status --porcelain)" ]] && echo false || echo true)" \
+    --arg claude "$cv" --arg grok "$gv" --argjson jq "$jqok" --arg mk "$mk" --argjson n "$n" \
+    --argjson gn "$gn" --argjson sync "$sync" --arg store "$STORE" '
+    {repo: $repo, head: $head, dirty: $dirty, claude: $claude, grok: $grok, jq: $jq,
+     marketplace: $mk, claude_plugins: $n, grok_plugins: $gn, grok_manifest_in_sync: $sync,
+     store: $store}
+    | .worth_driving = (.claude != "" and .grok != "" and .marketplace != "" and .claude_plugins > 0 and .grok_manifest_in_sync)'
+}
+
+cmd_install() {
+  parse_run_opts "$@"
+  need claude grok jq git
+  new_run "$PR" "$EXPECT"
+  selected "$ONLY" >/dev/null
+  local rc=0
+  [[ "$WANT_C" == 1 ]] && { install_claude "$ONLY" || rc=1; }
+  [[ "$WANT_G" == 1 ]] && { install_grok "$ONLY" || rc=1; }
+  summary "$ONLY" "$WANT_C" "$WANT_G" | tee "$RUN/evidence/result.json"
+  jq -e .ok "$RUN/evidence/result.json" >/dev/null && [[ "$rc" == 0 ]]
+}
+
+cmd_run() {
+  parse_run_opts "$@"
+  need claude grok jq git
+  new_run "$PR" "$EXPECT"
+  selected "$ONLY" >/dev/null
+  local rc=0 p
+  install_claude "$ONLY" || rc=1
+  install_grok "$ONLY" || rc=1
+  for p in $(selected "$ONLY"); do details_into_evidence "$p"; done
+  summary "$ONLY" 1 1 >"$RUN/evidence/result.json"
+  rm -rf "$RUN/scratch"
+  cat "$RUN/evidence/result.json"
+  jq -e .ok "$RUN/evidence/result.json" >/dev/null && [[ "$rc" == 0 ]]
+}
+
+cmd_details() {
+  local p="${1:?details needs a plugin name}"
+  need claude grok jq
+  latest_run
+  details_into_evidence "$p"
+  cat "$RUN/evidence/details-claude-$p.txt" "$RUN/evidence/details-grok-$p.txt"
+  grep -q '^Component inventory' "$RUN/evidence/details-claude-$p.txt" || die "$p is not installed in the latest run's Claude Code config"
+}
+
+cmd_setup() {
+  need claude grok jq
+  latest_run
+  local n
+  n="$(find "$RUN/evidence" -name 'setup-*.log' | wc -l)"
+  local rc=0
+  rec "setup-$((n + 1))" "$SRC/setup.sh" "$@" || rc=$?
+  cat "$RUN/evidence/setup-$((n + 1)).log"
+  return "$rc"
+}
+
+cmd_check() {
+  latest_run
+  local rc=0
+  rec check bash "$SRC/scripts/check.sh" || rc=$?
+  tail -5 "$RUN/evidence/check.log"
+  return "$rc"
+}
+
+cmd_cleanup() {
+  [[ -d "$RUNS" ]] || { echo "nothing to clean" >&2; return 0; }
+  local d
+  for d in "$RUNS"/*/scratch "$RUNS"/.new-*; do
+    [[ -e "$d" ]] || continue
+    rm -rf "$d"
+    echo "removed $d" >&2
+  done
+  echo "evidence kept under $RUNS" >&2
+}
+
+case "${1:-}" in
+  doctor) shift; cmd_doctor "$@" ;;
+  run) shift; cmd_run "$@" ;;
+  install) shift; cmd_install "$@" ;;
+  details) shift; cmd_details "$@" ;;
+  setup) shift; cmd_setup "$@" ;;
+  check) shift; cmd_check "$@" ;;
+  cleanup) shift; cmd_cleanup "$@" ;;
+  -h|--help|help) usage ;;
+  *) usage >&2; exit 1 ;;
+esac

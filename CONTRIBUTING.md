@@ -55,7 +55,7 @@ claude plugin details <name>@libreuiux   # lists the agents and skills Claude Co
 unset CLAUDE_CONFIG_DIR
 ```
 
-CI ([`.github/workflows/validate.yml`](.github/workflows/validate.yml)) runs the same checks on every pull request: it validates the marketplace, validates every plugin with `--strict`, and installs every plugin into a clean config. A first-time contributor's CI run waits until a maintainer approves it, so a pending check on your first pull request is expected.
+CI ([`.github/workflows/check.yml`](.github/workflows/check.yml), running `bash scripts/check.sh`) runs the same checks on every pull request: it validates the marketplace, validates every plugin with `--strict`, and installs every plugin into a clean config. A first-time contributor's CI run waits until a maintainer approves it, so a pending check on your first pull request is expected.
 
 ---
 
